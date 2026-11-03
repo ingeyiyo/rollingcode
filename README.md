@@ -20,7 +20,7 @@ Si abrís el `index.html` tenés una página con todos los proyectos ordenados, 
 
 ## Los que más me gustan
 
-**El portón automático.** Fue el desafío final de un curso de Arduino que hice al mismo tiempo, y en RollingCode armé la página para presentarlo. En Tinkercad hice un portón que se abre y se cierra con un control remoto: un Arduino, un servo que mueve el portón, un sensor infrarrojo para el control, dos interruptores que hacen de fines de carrera (Tinkercad no tiene fines de carrera, así que los simulé así) y una pantalla LCD que te dice si está abriendo o cerrando. La página explica cómo funciona el código y tiene un video de la simulación. Los programas de ese curso están en mi repo de Arduino.
+**El portón automático.** Fue el desafío final de un curso de Arduino que hice al mismo tiempo, y en RollingCode armé la página para presentarlo. En Tinkercad hice un portón que se abre y se cierra con un control remoto: un Arduino, un servo que mueve el portón, un sensor infrarrojo para el control, dos interruptores que hacen de fines de carrera (Tinkercad no tiene fines de carrera, así que los simulé así) y una pantalla LCD que te dice si está abriendo o cerrando. La página explica cómo funciona el código y tiene un video de la simulación. Los programas de ese curso están en mi repo [automatismo-programacion](https://github.com/ingeyiyo/automatismo-programacion).
 
 **El listado de compras.** Lo usé de verdad: es la lista de materiales que tenía que comprar para el TP de Laboratorio de Electrónica 1, con una página para cada componente. Ahí también practiqué un formulario de registro con casi todos los tipos de input.
 
