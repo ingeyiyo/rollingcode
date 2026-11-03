@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Tienda de ropa: Camperas." />
+    <!-- linea para palabras claves del buscador -->
+    <meta name="keywords" content="ropa, remeras, pantalones, camperas" />
+    <link rel="shortcut icon" href="../img/camiseta.png" type="image/png" />
+    <!-- bootstrap descargado, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Camperas | Tienda</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img class="img-fluid style-img-logo" src="../img/wmnx-Photoroom.png" alt="Logo de la tienda wmnx" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <!-- desplegable con las prendas -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Prendas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="remeras.html">Remeras</a></li>
+                  <li><a class="dropdown-item" href="pantalones.html">Pantalones</a></li>
+                  <li><a class="dropdown-item" href="camperas.html">Camperas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="container py-5">
+      <section class="text-center text-white">
+        <h1 class="display-5 fw-bold">Camperas</h1>
+        <p class="lead">Todavía no hay camperas cargadas. Muy pronto vas a ver el catálogo acá.</p>
+        <a class="btn btn-light mt-3" href="../index.html">Volver al inicio</a>
+      </section>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="text-center text-white py-3">
+      <p class="mb-0">&copy; Derechos reservados</p>
+    </footer>
+    <!-- popper lo necesita bootstrap para que funcione el desplegable -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

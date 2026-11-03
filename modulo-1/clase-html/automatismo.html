@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="shortcut icon" href="img/COPIT.png" type="image/x-icon">
+    <title>Desafio Final</title>
+</head>
+
+<body>
+    <header>
+        <h1>Desafio Final Automatismo y Programacion</h1>
+        <hr>
+    </header>
+
+    <table border cellpadding="5" cellspacing="0">
+        <thead>
+            <!-- cabecera de la tabla -->
+            <tr>
+                <!-- fila de la tabla -->
+                <td>Indice </td>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><a href="#desafio">Desafio</a> </td> <!-- fila de la tabla -->
+
+            </tr>
+
+            <tr>
+                <td><a href="pages/tinkerkad.html">TinkerKad</a> </td> <!-- fila de la tabla -->
+
+            <tr>
+                <td><a href="#arduino">Arduino</a> </td> <!-- fila de la tabla -->
+
+            </tr>
+            <tr>
+                <td> <a href="#codigo">Codigo porton automatico</a> </td> <!-- fila de la tabla -->
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <section id="desafio">
+
+        <header>
+            <h2>Desafio</h2>
+        </header>
+        <table>
+            <!-- creo una tabla estilo excel -->
+
+            <thead>
+                <!-- cabecera de la tabla -->
+                <tr>
+                    <!-- fila de la tabla -->
+                    <td>
+                        <h4>El desafio consiste en crear un programa automatizado de un porton, para ello
+                            necesitamos:</h4>
+                    </td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        1- Arduino
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        2-servomoto
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        3- sensor IR
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        4- control remoto por IR
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        5- fines de carrera (en el tinkerkad no existen, asi que tuve que simularlos por 2 llaves o
+                        interrutpor
+                        deslizantes)
+                    </td>
+                <tr>
+                    <td> 6- resistencias 1kΩ. Para el código del funcionamiento del porton tuve que usar 2
+                        librerías: #include
+                        Servo.H y #include IRremote.h y una tercera libreria para colocar una pantalla lcd #include
+                        LiquidCrystal.h </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <h4>(Aclaracion: las librerias van encerradas por <>)</h4> 
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+        <hr>
+    </section>
+    <section id="codigo">
+        <p>
+        <header>
+            <h2>Descipcion del Codigo</h2>
+        </header>
+
+
+        <table>
+            <!-- creo una tabla estilo excel -->
+
+            <thead>
+                <!-- cabecera de la tabla -->
+                <tr>
+                    <!-- fila de la tabla -->
+                    <td>
+                        <h4>El codigo del programa funciona son 3 condiciones:</h4>
+                    </td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        1- Si el fin de carrera del comienzo de carrera esta activo, y se presiona un botón del
+                        control, el porton se abre.
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        2- Si el fin de carrera del final esta activo, significa elfin de carrera del comienzo esta
+                        inactivo, osea
+                        abierto, y si se presiona un
+                        botón, el porton se cierra.
+                    </td>
+                <tr>
+                    <td> 3- Si ninguno de los dos fines de carreras están activos, significa que el
+                        porton esta en el medio del camino, y si se presiona un botón, el porton se cierra. Para
+                        ello
+                        uso dos
+                        variables que me lean en que posición se encuentran los interruptores deslizantes para podes
+                        preguntar cada
+                        caso </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+        <!-- <h6>#include IRremote.h</IRremote.h></h6>
+        <h6>#include Servo.h</Servo.h></h6>
+        <h6>#include LiquidCrystal.h</LiquidCrystal.h></h6>
+        <h6>const int RS = A0;</h6>
+        <h6>const int E = A1;</h6>
+        <h6>const int D4 = A2;</h6>
+        <h6>const int D5 = A3;</h6>
+        <h6>const int D6 = A4;</h6>
+        <h6>const int D7 = A5;</h6>
+        <h6>LiquidCrystal lcd(RS, E, D4, D5, D6, D7);</h6>
+        <h6>Servo servo;</h6>
+        <h6>int Com_Carrera = 5;</h6>
+        <h6></h6>
+        <h6></h6> -->
+
+        </p>
+        <hr>
+    </section>
+
+    <section id="arduino">
+        <p>
+        <header>
+            <h2>Arduino</h2>
+        </header>
+        <h4>No puedo colocar todas las lineas de codigo en orden asi que las coloco por imagen:</h4>
+        <img src="img/codigoparte1.png" alt="codigo parte1" height="900" width="1600">
+        <img src="img/codigoparte2.png" alt="codigo parte2" height="900" width="1600">
+        <img src="img/codigoparte3.png" alt="codigo parte3">
+
+        </p>
+        <hr>
+    </section>
+    <footer><small><b>Nombre y apellido: Juan Pablo Rearte</b> </small></footer>
+    <small><b>comisión: 1586049 Tucuman</b></small>
+
+</body>
+
+</html>

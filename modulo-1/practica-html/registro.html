@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="inicio">
+            <a href="index.html">Valorant</a>
+            <a href="skins.html">Mejores Skins</a>
+            <a href="registro.html">Registrarse</a>
+            <a href="iniciosesion.html">Inicion Sesion</a>
+            <a href="position.html">Posicion</a>
+        </nav>
+    </header>
+    <main>
+        <section class="encabezado">
+            <h1>Valorant GOD HTML5 / CSS3</h1>
+            <p>Comienzo de pagina con <b>HTML5 y CSS3</b> </p>
+            
+        </section>
+        
+        <section>
+            <h2>Registro</h2>
+            <form>
+                <div>
+                    <label for="usuario">Usuario: </label>
+                    <input type="text" id="usuario" name="usuario" maxlength="15" minlength="4" placeholder="pepito123" required>
+                </div>
+                <div>
+                    <!-- <label>ejemplo</label>
+                    <input type="number"> -->
+                    <label for="contrasena">Contraseña: </label>
+                    <input type="password" id="contrasena" name="contrasena" maxlength="15" minlength="4" required>
+                </div>
+                <div>
+                    <label for="correo">Correo Electronico: </label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@email.com" required>
+                </div>
+                <!-- <div>
+                    <label>Comentarios: </label>
+                    <textarea placeholder="ingrese algun comentario" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <label>Como nos conociste</label>
+                    <select>
+                        <option></option>
+                        <option value="">hola</option>
+                        <option>tumama mauri</option>
+                        <option>tumama flori</option>
+                    </select>
+                </div> -->
+                <p>¿Tiene conocimientos previos de programación?</p>
+                <div>
+                    <input type="radio" id="progSi" name="grupo" value="si">
+                    <label for="progSi">Si</label>
+                    <input type="radio" id="progNo" name="grupo" value="no">
+                    <label for="progNo">No</label>
+                </div>
+                <p>¿Quiere suscribirse a nuestro newsletter?</p>
+                <div>
+                    <input type="checkbox" id="newsDiario" name="newsletter" value="diario">
+                    <label for="newsDiario">Newsletter diario</label>
+                    <input type="checkbox" id="newsSemanal" name="newsletter" value="semanal">
+                    <label for="newsSemanal">Newsletter semanal</label>
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>&copy; Juan Pablo Rearte, alias Yiyo. Todos los derechos reservados</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+# Configuración del editor
+.vscode/
+
+# Archivos comprimidos
+*.rar
+*.zip
+
+# Datos de señales de otra materia (no son parte del curso)
+tienda-ropa/a.txt
+tienda-ropa/senales/

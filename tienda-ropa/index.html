@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Tienda de ropa." />
+    <!-- linea para palabras claves del buscador -->
+    <meta name="keywords" content="ropa, remeras, pantalones, camperas" />
+    <link rel="shortcut icon" href="img/camiseta.png" type="image/png" />
+    <!-- bootstrap descargado, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Tienda</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img class="img-fluid style-img-logo" src="img/wmnx-Photoroom.png" alt="Logo de la tienda wmnx" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+              <!-- desplegable con las prendas -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Prendas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="pages/remeras.html">Remeras</a></li>
+                  <li><a class="dropdown-item" href="pages/pantalones.html">Pantalones</a></li>
+                  <li><a class="dropdown-item" href="pages/camperas.html">Camperas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="pages/login.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="pages/registro.html">Registrarse</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="container py-5">
+      <section class="text-center text-white mb-5">
+        <h1 class="display-4 fw-bold">Ropa para todos los días</h1>
+        <p class="lead">Remeras, pantalones y camperas. Elegí una categoría para empezar.</p>
+      </section>
+
+      <!-- una tarjeta por categoria, en celular quedan una abajo de la otra -->
+      <section class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="h4 card-title">Remeras</h2>
+              <p class="card-text">Básicas y estampadas, de algodón.</p>
+              <a href="pages/remeras.html" class="btn btn-dark">Ver remeras</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="h4 card-title">Pantalones</h2>
+              <p class="card-text">Jeans, joggers y cargo.</p>
+              <a href="pages/pantalones.html" class="btn btn-dark">Ver pantalones</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h2 class="h4 card-title">Camperas</h2>
+              <p class="card-text">Para el frío y para la media estación.</p>
+              <a href="pages/camperas.html" class="btn btn-dark">Ver camperas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="text-center text-white py-3">
+      <p class="mb-0">&copy; Derechos reservados</p>
+    </footer>
+    <!-- popper lo necesita bootstrap para que funcione el desplegable -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../assets/componentes-pasivos.png" type="image/png" />
+    <title>Contacto</title>
+  </head>
+  <body id="bodyRegistro">
+    <header>
+      <nav class="inicio">
+        <a href="../pages/listacompras.html">Listado de Compras</a>
+        <a href="../pages/elementos.html">Elementos</a>
+        <a href="../pages/contacto.html">Contacto</a>
+        <a href="../pages/iniciosesion.html">Inicio de Sesion</a>
+        <a href="../pages/registro.html">Registro</a>
+      </nav>
+    </header>
+    <h1 class="titulo">Contacto</h1>
+
+    <!-- formulario de contacto, uso las mismas clases que en registro -->
+    <section class="centrar">
+      <form class="registro">
+        <div>
+          <div><label for="nombre">Nombre: *</label></div>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div>
+          <div><label for="email">Email: *</label></div>
+          <input type="email" id="email" name="email" placeholder="exmple@email.com" required />
+        </div>
+        <div class="cuentanos">
+          <div><label for="mensaje" class="aux">Mensaje: *</label></div>
+          <textarea id="mensaje" name="mensaje" cols="30" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer><p>&copy;Derechos reservados</p></footer>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Componentes de Bootstrap 5: botones, alertas, tarjetas, acordeón y formularios." />
+    <link rel="shortcut icon" href="../img/bootstap2.jpeg" type="image/jpeg" />
+    <!-- bootstrap por cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Elementos | Bootstrap</title>
+  </head>
+
+  <body>
+    <header id="titulo">
+      <!-- navegacion -->
+      <nav class="inicio">
+        <a href="../index.html">Inicio</a>
+        <a href="elementos.html">Elementos</a>
+        <a href="colores.html">Colores</a>
+      </nav>
+      <h3 class="container py-3">Elementos</h3>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="container py-4">
+      <!-- botones, cambia el color segun la clase btn- -->
+      <section class="mb-5">
+        <h2 class="h4">Botones</h2>
+        <button type="button" class="btn btn-primary">Primario</button>
+        <button type="button" class="btn btn-secondary">Secundario</button>
+        <button type="button" class="btn btn-success">Éxito</button>
+        <button type="button" class="btn btn-outline-danger">Borde peligro</button>
+        <button type="button" class="btn btn-dark btn-sm">Chico</button>
+        <button type="button" class="btn btn-warning btn-lg">Grande</button>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="h4">Alertas</h2>
+        <div class="alert alert-success" role="alert">El formulario se guardó bien.</div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          Esta alerta se puede cerrar con la cruz.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="h4">Tarjetas en grilla</h2>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="../img/bootstap.jpeg" class="card-img-top" alt="Logo de Bootstrap" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Grilla</h3>
+                <p class="card-text">Con col-12, col-sm-6 y col-lg-4 las tarjetas pasan de 1 a 3 por fila.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Espaciado</h3>
+                <p class="card-text">Las clases m-, p-, g- y py- manejan márgenes y rellenos sin escribir CSS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Responsive</h3>
+                <p class="card-text">Achicá la ventana para ver cómo se reacomodan las tarjetas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="h4">Acordeón</h2>
+        <!-- acordeon: se abre una pregunta y se cierra la otra -->
+        <div class="accordion" id="acordeon">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#uno" aria-expanded="true" aria-controls="uno">
+                ¿Qué es Bootstrap?
+              </button>
+            </h3>
+            <div id="uno" class="accordion-collapse collapse show" data-bs-parent="#acordeon">
+              <div class="accordion-body">Un framework de CSS y JavaScript con componentes listos para usar.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dos" aria-expanded="false" aria-controls="dos">
+                ¿Cómo se agrega?
+              </button>
+            </h3>
+            <div id="dos" class="accordion-collapse collapse" data-bs-parent="#acordeon">
+              <div class="accordion-body">Con un link al CSS y un script al JS desde el CDN, o descargando los archivos.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="h4">Formulario</h2>
+        <!-- formulario con las clases form-control y form-label -->
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="novedades" name="novedades" />
+              <label class="form-check-label" for="novedades">Quiero recibir novedades</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="text-center py-3"><p class="mb-0">&copy; Derechos reservados</p></footer>
+
+    <!-- js de bootstrap, lo necesitan el acordeon y la alerta que se cierra -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

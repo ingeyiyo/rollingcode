@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+/* quito margen de la pagina */
+body {
+    margin: 0%;
+    font-family: 'Fascinate', cursive;
+}
+
+/* navegacion */
+nav {
+    background-color: rosybrown;
+    padding: 15px 30px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+nav a:hover{
+    background-color: red;    
+}
+
+.inicio{
+    text-align: center;
+}
+
+.encabezado{
+    text-align: center;
+    background-color: teal;
+    color: white;
+    padding: 25px;
+}
+
+.imagen{
+    text-align: center;
+}
+.registro{
+    margin-left: 30px;
+    color: brown;
+    text-align: left;
+}
+
+button{
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: lightslategrey;
+    box-shadow: 0px 2px 0px rgb(36, 1, 1);
+}
+
+.botones{
+    text-align: center;    
+}
+
+.botonesrojos{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(102, 33, 12, 0.505);
+    color: rgb(3, 65, 72);
+    
+}
+.botonesazules{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(12, 9, 88, 0.6);
+    color: rgba(108, 4, 23, 0.648);
+    
+}
+
+.footer{
+    background-color: teal;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+h1,h2, h3,h4,h5,h6{
+    text-align: center;
+}
+
+ol{
+    text-align: center;
+    list-style-position: inside;
+    color: rgb(34, 1, 9);
+}
+ol a{    
+    color: rgb(13, 9, 87);
+}
+/* .tiposarmas{
+    color: rgb(144, 13, 41);
+} */
+
+
+table{
+    color: teal;
+    text-align: center;
+    margin: auto;
+    
+    /* width: 100%; */
+}
+table a{
+    color: black;
+} 
+
+th{ /* para la fila principal */
+    background-color: black;
+    color: wheat;
+}
+/* toda la tabla excepto la fila principal
+td{ 
+    background-color: lightcoral;
+} */
+
+/*tr:nth-child(odd) para filas impares */
+/*tr:nth-child(even) para filas pares */
+tr:nth-child(odd){ /* para todas las filas */
+    background-color: rgba(7, 40, 112, 0.571);
+} 
+tr:nth-child(even){ /* para todas las filas */
+    background-color: lightcoral;
+} 
+
+.caja{
+    border: 2px solid red;
+    width: 150px;
+    height: 50px;
+    background-color: aqua;
+}
+#cajaroja{
+    background-color: rgba(139, 6, 6, 0.478);
+}
+#cajaazul{
+    background-color: rgba(9, 9, 60, 0.682);
+}

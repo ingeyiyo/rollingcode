@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Plantilla para practicar Bootstrap 5." />
+    <link rel="shortcut icon" href="img/bootstap2.jpeg" type="image/jpeg" />
+    <!-- bootstrap por cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Plantilla Bootstrap</title>
+  </head>
+
+  <body>
+    <header id="titulo">
+      <!-- navegacion -->
+      <nav class="inicio">
+        <a href="index.html">Inicio</a>
+        <a href="pages/elementos.html">Elementos</a>
+        <a href="pages/colores.html">Colores</a>
+      </nav>
+      <h3 class="container py-3">Comienzo Bootstrap</h3>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="container py-4">
+      <p class="lead">
+        Plantilla para practicar Bootstrap 5 cargado por CDN. Cada página
+        muestra una parte del framework.
+      </p>
+      <!-- grilla de bootstrap: col-12 en celular y col-md-6 en compu -->
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h5 card-title">Elementos</h2>
+              <p class="card-text">
+                Botones, alertas, tarjetas, acordeón y un formulario con las
+                clases de Bootstrap.
+              </p>
+              <a href="pages/elementos.html" class="btn btn-primary">Ver elementos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h5 card-title">Colores</h2>
+              <p class="card-text">
+                Los colores del tema aplicados a fondos, textos y bordes.
+              </p>
+              <a href="pages/colores.html" class="btn btn-outline-primary">Ver colores</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="text-center py-3"><p class="mb-0">&copy; Derechos reservados</p></footer>
+
+    <!-- js de bootstrap, lo necesitan el acordeon y la alerta que se cierra -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

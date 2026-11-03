@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta
+      name="description"
+      content="Portfolio de Juan Pablo Rearte con los proyectos hechos durante el curso de desarrollo web de RollingCode: HTML, CSS, Flexbox, formularios y Bootstrap."
+    />
+    <meta name="author" content="Juan Pablo Rearte" />
+    <!-- linea para el icono de la pestaña del navegador -->
+    <link rel="icon" href="listado-compras/assets/html.png" type="image/png" />
+    <!-- uso la misma hoja de estilos para las 3 paginas -->
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <title>Juan Pablo Rearte · Proyectos RollingCode</title>
+  </head>
+
+  <body>
+    <!-- cabecera con el logo y la navegacion -->
+    <header class="nav">
+      <div class="contenedor">
+        <a class="nav__logo" href="index.html">&lt;yiyo<span>/</span>&gt;</a>
+        <nav aria-label="Principal">
+          <!-- aria-current marca en que pagina estoy -->
+          <ul class="nav__links">
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="pages/proyectos.html">Proyectos</a></li>
+            <li><a href="pages/bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- portada de la pagina -->
+      <section class="hero contenedor">
+        <p class="etiqueta">Curso de desarrollo web · RollingCode School</p>
+        <h1>Lo que construí aprendiendo <em>HTML y CSS</em></h1>
+        <p>
+          Soy Juan Pablo Rearte (Yiyo), de Tucumán. Acá junté los proyectos que
+          hice durante el curso de RollingCode: desde mi primera página con
+          etiquetas sueltas hasta una tienda con Bootstrap. Están en orden,
+          para que se vea cómo fui avanzando.
+        </p>
+        <div class="hero__acciones">
+          <a class="boton boton--lleno" href="pages/proyectos.html">Ver proyectos</a>
+          <a class="boton" href="pages/bitacora.html">Qué aprendí</a>
+        </div>
+      </section>
+
+      <section class="contenedor">
+        <!-- numeros rapidos del curso -->
+        <div class="datos">
+          <div><strong>7</strong><span>proyectos</span></div>
+          <div><strong>40</strong><span>archivos HTML</span></div>
+          <div><strong>2022</strong><span>primera línea de código</span></div>
+          <div><strong>1586049</strong><span>comisión Tucumán</span></div>
+        </div>
+      </section>
+
+      <section class="seccion contenedor">
+        <div class="seccion__titulo">
+          <h2>Qué sé hacer</h2>
+        </div>
+        <!-- lo que aprendi, una cajita por tema -->
+        <div class="habilidades">
+          <article class="habilidad">
+            <p class="etiqueta">01</p>
+            <h3>HTML semántico</h3>
+            <p>
+              Estructura con header, nav, main, section, article y footer.
+              Listas, tablas, imágenes, video y navegación con anclas.
+            </p>
+          </article>
+          <article class="habilidad">
+            <p class="etiqueta">02</p>
+            <h3>Formularios</h3>
+            <p>
+              Inputs de texto, email, fecha, radio, checkbox, select y textarea,
+              con validación nativa (required, minlength, maxlength).
+            </p>
+          </article>
+          <article class="habilidad">
+            <p class="etiqueta">03</p>
+            <h3>CSS y maquetado</h3>
+            <p>
+              Selectores, box model, position (relative, absolute, fixed),
+              Flexbox, filtros, transiciones y media queries.
+            </p>
+          </article>
+          <article class="habilidad">
+            <p class="etiqueta">04</p>
+            <h3>Bootstrap 5</h3>
+            <p>
+              Navbar responsive con menú colapsable, grilla y componentes, tanto
+              por CDN como con los archivos descargados.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion contenedor">
+        <div class="seccion__titulo">
+          <h2>Proyectos destacados</h2>
+          <a href="pages/proyectos.html">Ver los 7 →</a>
+        </div>
+        <!-- los 3 proyectos que mas me gustaron, el resto esta en proyectos.html -->
+        <div class="proyectos">
+          <article class="proyecto">
+            <img
+              class="proyecto__img"
+              src="listado-compras/assets/tl081.jpg"
+              alt="Diagrama del amplificador operacional TL081"
+              <!-- lazy hace que la imagen cargue recien cuando llegas a verla -->
+              loading="lazy"
+            />
+            <div class="proyecto__cuerpo">
+              <div class="proyecto__meta">
+                <span>Jun 2023</span>
+                <span class="estado estado--ok">Completo</span>
+              </div>
+              <h3>Listado de compras</h3>
+              <p>
+                Sitio de varias páginas con los materiales para el TP de
+                Laboratorio de Electrónica 1, más un formulario de registro
+                completo.
+              </p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Formularios</li>
+                <li>Position</li>
+              </ul>
+              <div class="proyecto__links">
+                <a href="listado-compras/pages/listacompras.html">Ver demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto">
+            <img
+              class="proyecto__img"
+              src="galeria-funkos/img/groot.jpg"
+              alt="Funko Pop de Groot"
+              loading="lazy"
+            />
+            <div class="proyecto__cuerpo">
+              <div class="proyecto__meta">
+                <span>Jun 2023</span>
+                <span class="estado estado--ok">Completo</span>
+              </div>
+              <h3>Galería Funko Pop</h3>
+              <p>
+                Galería de imágenes con Flexbox, degradados y un efecto de
+                desenfoque que se va al pasar el mouse.
+              </p>
+              <ul class="tags">
+                <li>Flexbox</li>
+                <li>Filtros</li>
+                <li>Hover</li>
+                <li>Media queries</li>
+              </ul>
+              <div class="proyecto__links">
+                <a href="galeria-funkos/index.html">Ver demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proyecto">
+            <img
+              class="proyecto__img"
+              src="modulo-1/clase-html/img/tinkerkad.jpg"
+              alt="Logo de Tinkercad"
+              loading="lazy"
+            />
+            <div class="proyecto__cuerpo">
+              <div class="proyecto__meta">
+                <span>Jun 2022</span>
+                <span class="estado estado--ok">Completo</span>
+              </div>
+              <h3>Desafío: portón automático</h3>
+              <p>
+                Mi desafío final del Módulo 1: documenté en HTML un portón
+                automático con Arduino, servo, sensor IR y pantalla LCD.
+              </p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>Tablas</li>
+                <li>Arduino</li>
+                <li>Video</li>
+              </ul>
+              <div class="proyecto__links">
+                <a href="modulo-1/clase-html/automatismo.html">Ver demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="pie">
+      <div class="contenedor">
+        <span>Juan Pablo Rearte · Comisión 1586049 · Tucumán</span>
+        <span>Hecho con HTML y CSS, sin frameworks</span>
+      </div>
+    </footer>
+  </body>
+</html>

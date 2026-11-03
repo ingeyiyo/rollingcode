@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+*{
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+#titulo {
+    
+    background-image: linear-gradient(to right, rgb(0, 225, 255) , green, rgb(255, 0, 0));
+    padding: 10px 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#titulo > img{
+    width: 25%;
+    background-image: url("../img/darth-vader.jpg"), url("../img/darth-vader.jpg");
+    border-radius: 48%;
+}
+
+main{
+    margin: 25px;    
+}
+
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(39, 39, 81) 35%, rgb(1, 62, 74) 100%);
+    
+}
+
+.fila{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+    border: 0;
+    border-radius: 1%;
+    box-shadow: 1px 1px 5px 10px rgb(177, 177, 177);
+    background-color: rgb(11, 2, 64);
+    margin-bottom: 15%;
+    
+}
+
+.caja{    
+    width: 23%;
+    margin: 1%;
+}
+.caja img{
+    width: 100%;
+    height: auto;
+    border: 0;
+    border-radius: 3%;
+}
+
+.efectoFoto{
+    filter: blur(5px);
+}
+
+.efectoFoto:hover{
+    position: relative;
+    top: 5px;
+    right: 5px;    
+    box-shadow: 6px 5px 3px black;
+    filter: blur(0);
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+
+/* medias queries */
+/*
+@media tipo medio: all, only, print, screen, speech, luego sigue and entre () min.width y/o max.width
+*/
+
+/* tamaño tablet: 3 fotos por fila */
+@media all and (min-width: 763px) and (max-width: 991px) {
+    .caja{
+        width: 31%;
+    }
+}
+
+/* tamaño celular: 2 fotos por fila */
+@media all and (min-width: 320px) and (max-width: 762px) {
+    #titulo{
+        background: rgb(0, 0, 0);
+    }
+    #titulo > img{
+        width: 50%;
+    }
+    .caja{
+        width: 46%;
+    }
+}
+
+/*tamaño extra small: 1 foto por fila */
+@media all and (max-width: 319px){
+    #titulo{
+        background: rgb(0, 0, 0);
+    }
+    .caja{
+        width: 90%;
+    }
+}
