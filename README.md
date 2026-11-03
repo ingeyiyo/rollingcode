@@ -32,7 +32,7 @@ Si abrís el `index.html` tenés una página con todos los proyectos ordenados, 
 index.html            la portada
 pages/proyectos.html  todos los proyectos, se pueden filtrar por html, css o bootstrap
 pages/bitacora.html   lo que fui aprendiendo y lo que haría distinto
-css/portfolio.css     los estilos de esas 3 páginas
+css/estilos.css       los estilos de esas 3 páginas (lo demás lo hace Bootstrap)
 apuntes/              apuntes sueltos de las clases
 ```
 
@@ -44,7 +44,7 @@ Lo más fácil es abrirlo con Live Server en VS Code. Todas las rutas son relati
 
 ## Con qué está hecho
 
-HTML, CSS y Bootstrap 5. La portada la hice sin frameworks.
+HTML, CSS y Bootstrap 5. La portada también la hice con Bootstrap, como la tienda de ropa.
 
 ---
 

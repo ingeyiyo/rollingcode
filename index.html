@@ -11,200 +11,178 @@
     <meta name="author" content="Juan Pablo Rearte" />
     <!-- linea para el icono de la pestaña del navegador -->
     <link rel="icon" href="listado-compras/assets/html.png" type="image/png" />
-    <!-- uso la misma hoja de estilos para las 3 paginas -->
-    <link rel="stylesheet" href="css/portfolio.css" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>Juan Pablo Rearte · Proyectos RollingCode</title>
   </head>
 
   <body>
-    <!-- cabecera con el logo y la navegacion -->
-    <header class="nav">
-      <div class="contenedor">
-        <a class="nav__logo" href="index.html">&lt;yiyo<span>/</span>&gt;</a>
-        <nav aria-label="Principal">
-          <!-- aria-current marca en que pagina estoy -->
-          <ul class="nav__links">
-            <li><a href="index.html" aria-current="page">Inicio</a></li>
-            <li><a href="pages/proyectos.html">Proyectos</a></li>
-            <li><a href="pages/bitacora.html">Bitácora</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Yiyo Rearte</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="pages/proyectos.html">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" href="pages/bitacora.html">Bitácora</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <!-- portada de la pagina -->
-      <section class="hero contenedor">
-        <p class="etiqueta">Curso de desarrollo web · RollingCode School</p>
-        <h1>Lo que construí aprendiendo <em>HTML y CSS</em></h1>
-        <p>
-          Soy Juan Pablo Rearte (Yiyo), de Tucumán. Acá junté los proyectos que
-          hice durante el curso de RollingCode: desde mi primera página con
-          etiquetas sueltas hasta una tienda con Bootstrap. Están en orden,
-          para que se vea cómo fui avanzando.
-        </p>
-        <div class="hero__acciones">
-          <a class="boton boton--lleno" href="pages/proyectos.html">Ver proyectos</a>
-          <a class="boton" href="pages/bitacora.html">Qué aprendí</a>
+      <!-- presentacion, ocupa todo el ancho con el fondo de color -->
+      <section class="portada text-white text-center py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Mis proyectos de RollingCode</h1>
+          <p class="lead">
+            Soy Juan Pablo Rearte (Yiyo), de Tucumán. Acá junté lo que hice en
+            el curso de desarrollo web, desde mi primera página hasta una tienda
+            con Bootstrap. Están en orden para que se vea cómo fui avanzando.
+          </p>
+          <a href="pages/proyectos.html" class="btn btn-light">Ver proyectos</a>
+          <a href="pages/bitacora.html" class="btn btn-outline-light">Qué aprendí</a>
         </div>
       </section>
 
-      <section class="contenedor">
-        <!-- numeros rapidos del curso -->
-        <div class="datos">
-          <div><strong>7</strong><span>proyectos</span></div>
-          <div><strong>40</strong><span>archivos HTML</span></div>
-          <div><strong>2022</strong><span>primera línea de código</span></div>
-          <div><strong>3</strong><span>años de cursada</span></div>
+      <!-- lo que aprendi, una tarjeta por tema -->
+      <section class="container py-5">
+        <h2 class="mb-4">Qué aprendí</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">HTML</h3>
+                <p class="card-text">
+                  Header, nav, main, section, article y footer. Listas, tablas,
+                  imágenes, video y anclas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Formularios</h3>
+                <p class="card-text">
+                  Inputs de texto, email, fecha, radio, checkbox, select y
+                  textarea, con required y minlength.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">CSS</h3>
+                <p class="card-text">
+                  Selectores, position, Flexbox, filtros, degradados y media
+                  queries.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Bootstrap 5</h3>
+                <p class="card-text">
+                  Navbar con menú hamburguesa, grilla, tarjetas y formularios,
+                  por CDN y descargado.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="seccion contenedor">
-        <div class="seccion__titulo">
-          <h2>Qué sé hacer</h2>
-        </div>
-        <!-- lo que aprendi, una cajita por tema -->
-        <div class="habilidades">
-          <article class="habilidad">
-            <p class="etiqueta">01</p>
-            <h3>HTML semántico</h3>
-            <p>
-              Estructura con header, nav, main, section, article y footer.
-              Listas, tablas, imágenes, video y navegación con anclas.
-            </p>
-          </article>
-          <article class="habilidad">
-            <p class="etiqueta">02</p>
-            <h3>Formularios</h3>
-            <p>
-              Inputs de texto, email, fecha, radio, checkbox, select y textarea,
-              con validación nativa (required, minlength, maxlength).
-            </p>
-          </article>
-          <article class="habilidad">
-            <p class="etiqueta">03</p>
-            <h3>CSS y maquetado</h3>
-            <p>
-              Selectores, box model, position (relative, absolute, fixed),
-              Flexbox, filtros, transiciones y media queries.
-            </p>
-          </article>
-          <article class="habilidad">
-            <p class="etiqueta">04</p>
-            <h3>Bootstrap 5</h3>
-            <p>
-              Navbar responsive con menú colapsable, grilla y componentes, tanto
-              por CDN como con los archivos descargados.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="seccion contenedor">
-        <div class="seccion__titulo">
-          <h2>Proyectos destacados</h2>
-          <a href="pages/proyectos.html">Ver los 7 →</a>
-        </div>
-        <!-- los 3 proyectos que mas me gustaron, el resto esta en proyectos.html -->
-        <div class="proyectos">
-          <article class="proyecto">
-            <!-- lazy hace que la imagen cargue recien cuando llegas a verla -->
-            <img
-              class="proyecto__img"
-              src="listado-compras/assets/tl081.jpg"
-              alt="Diagrama del amplificador operacional TL081"
-              loading="lazy"
-            />
-            <div class="proyecto__cuerpo">
-              <div class="proyecto__meta">
-                <span>Jun 2023</span>
-                <span class="estado estado--ok">Completo</span>
-              </div>
-              <h3>Listado de compras</h3>
-              <p>
-                Sitio de varias páginas con los materiales para el TP de
-                Laboratorio de Electrónica 1, más un formulario de registro
-                completo.
-              </p>
-              <ul class="tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Formularios</li>
-                <li>Position</li>
-              </ul>
-              <div class="proyecto__links">
-                <a href="listado-compras/pages/listacompras.html">Ver demo</a>
+      <!-- los 3 proyectos que mas me gustaron, el resto esta en proyectos.html -->
+      <section class="container pb-5">
+        <h2 class="mb-4">Los que más me gustan</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <img
+                src="listado-compras/assets/tl081.jpg"
+                class="card-img-top"
+                alt="Diagrama del amplificador operacional TL081"
+              />
+              <div class="card-body">
+                <h3 class="h5 card-title">Listado de compras</h3>
+                <p class="card-text">
+                  La lista de materiales para el TP de Laboratorio de
+                  Electrónica 1, con una página por componente y un formulario
+                  de registro.
+                </p>
+                <a href="listado-compras/pages/listacompras.html" class="btn btn-dark">Ver demo</a>
               </div>
             </div>
-          </article>
-
-          <article class="proyecto">
-            <img
-              class="proyecto__img"
-              src="galeria-funkos/img/groot.jpg"
-              alt="Funko Pop de Groot"
-              loading="lazy"
-            />
-            <div class="proyecto__cuerpo">
-              <div class="proyecto__meta">
-                <span>Jun 2023</span>
-                <span class="estado estado--ok">Completo</span>
-              </div>
-              <h3>Galería Funko Pop</h3>
-              <p>
-                Galería de imágenes con Flexbox, degradados y un efecto de
-                desenfoque que se va al pasar el mouse.
-              </p>
-              <ul class="tags">
-                <li>Flexbox</li>
-                <li>Filtros</li>
-                <li>Hover</li>
-                <li>Media queries</li>
-              </ul>
-              <div class="proyecto__links">
-                <a href="galeria-funkos/index.html">Ver demo</a>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <img
+                src="galeria-funkos/img/groot.jpg"
+                class="card-img-top"
+                alt="Funko Pop de Groot"
+              />
+              <div class="card-body">
+                <h3 class="h5 card-title">Galería de Funkos</h3>
+                <p class="card-text">
+                  Las fotos arrancan borrosas y se enfocan cuando pasás el mouse
+                  por arriba. En el celular quedan de a dos.
+                </p>
+                <a href="galeria-funkos/index.html" class="btn btn-dark">Ver demo</a>
               </div>
             </div>
-          </article>
-
-          <article class="proyecto">
-            <img
-              class="proyecto__img"
-              src="modulo-1/clase-html/img/tinkerkad.jpg"
-              alt="Logo de Tinkercad"
-              loading="lazy"
-            />
-            <div class="proyecto__cuerpo">
-              <div class="proyecto__meta">
-                <span>Jun 2022</span>
-                <span class="estado estado--ok">Completo</span>
-              </div>
-              <h3>Desafío: portón automático</h3>
-              <p>
-                El desafío final de mi curso de Arduino, que documenté en HTML: un portón
-                automático con Arduino, servo, sensor IR y pantalla LCD.
-              </p>
-              <ul class="tags">
-                <li>HTML</li>
-                <li>Tablas</li>
-                <li>Arduino</li>
-                <li>Video</li>
-              </ul>
-              <div class="proyecto__links">
-                <a href="modulo-1/clase-html/automatismo.html">Ver demo</a>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <img
+                src="modulo-1/clase-html/img/tinkerkad.jpg"
+                class="card-img-top"
+                alt="Logo de Tinkercad"
+              />
+              <div class="card-body">
+                <h3 class="h5 card-title">Portón automático</h3>
+                <p class="card-text">
+                  La página donde presenté el desafío final de mi curso de
+                  Arduino: un portón con servo, control remoto y pantalla LCD.
+                </p>
+                <a href="modulo-1/clase-html/automatismo.html" class="btn btn-dark">Ver demo</a>
               </div>
             </div>
-          </article>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="pages/proyectos.html" class="btn btn-outline-dark">Ver los 7 proyectos</a>
         </div>
       </section>
     </main>
 
     <!-- pie de pagina -->
-    <footer class="pie">
-      <div class="contenedor">
-        <span>Juan Pablo Rearte · Tucumán</span>
-        <span>Hecho con HTML y CSS, sin frameworks</span>
-      </div>
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">Juan Pablo Rearte · Tucumán</p>
     </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

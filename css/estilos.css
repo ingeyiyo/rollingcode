@@ -1,0 +1,39 @@
+/* estilos para las 3 paginas del portfolio, el resto lo hace bootstrap */
+body {
+  background-color: #f4f4f4;
+}
+
+/* fondo de la presentacion de arriba */
+.portada {
+  background: linear-gradient(135deg, #1f3c88, #0b5cad);
+}
+
+/* que todas las fotos de las tarjetas tengan el mismo alto */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* foto de cada proyecto en la pagina de proyectos */
+.foto-proyecto {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+}
+
+/* codigo de antes y despues en la bitacora */
+pre {
+  background-color: #212529;
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+/* tamaño celular */
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 160px;
+  }
+}

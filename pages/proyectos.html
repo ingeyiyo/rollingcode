@@ -11,286 +11,281 @@
     <meta name="author" content="Juan Pablo Rearte" />
     <!-- linea para el icono de la pestaña del navegador -->
     <link rel="icon" href="../listado-compras/assets/html.png" type="image/png" />
-    <!-- uso la misma hoja de estilos para las 3 paginas -->
-    <link rel="stylesheet" href="../css/portfolio.css" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <title>Proyectos · Juan Pablo Rearte</title>
   </head>
 
   <body>
-    <!-- cabecera con el logo y la navegacion -->
-    <header class="nav">
-      <div class="contenedor">
-        <a class="nav__logo" href="../index.html">&lt;yiyo<span>/</span>&gt;</a>
-        <nav aria-label="Principal">
-          <!-- aria-current marca en que pagina estoy -->
-          <ul class="nav__links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
-            <li><a href="bitacora.html">Bitácora</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Yiyo Rearte</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" href="bitacora.html">Bitácora</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="contenedor">
-      <!-- portada de la pagina -->
-      <section class="hero">
-        <p class="etiqueta">Proyectos · 2022 a 2025</p>
-        <h1>Siete proyectos, <em>en orden</em></h1>
-        <p>
-          Cada uno tiene una demo que podés abrir. Algunos están completos y
-          otros quedaron a mitad de camino, y lo aclaro en cada caso. Les
-          corregí errores que tenían, pero el diseño es el mismo de cuando
-          los hice.
-        </p>
-      </section>
+    <main class="container py-5">
+      <h1 class="fw-bold">Mis 7 proyectos</h1>
+      <p class="lead">
+        Cada uno tiene una demo que podés abrir. Algunos están completos y
+        otros quedaron a mitad de camino.
+      </p>
 
       <!-- botones para filtrar, el data-filtro lo uso en el script de abajo -->
-      <div class="filtros" role="group" aria-label="Filtrar proyectos">
-        <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
-        <button type="button" data-filtro="html" aria-pressed="false">HTML</button>
-        <button type="button" data-filtro="css" aria-pressed="false">CSS</button>
-        <button type="button" data-filtro="bootstrap" aria-pressed="false">Bootstrap</button>
+      <div class="mb-4">
+        <button type="button" class="btn btn-dark" data-filtro="todos">Todos</button>
+        <button type="button" class="btn btn-outline-dark" data-filtro="html">HTML</button>
+        <button type="button" class="btn btn-outline-dark" data-filtro="css">CSS</button>
+        <button type="button" class="btn btn-outline-dark" data-filtro="bootstrap">Bootstrap</button>
       </div>
 
-      <!-- cada proyecto es un article, el data-tipo dice si es html, css o bootstrap -->
-      <article class="detalle" data-tipo="html">
-        <img
-          class="detalle__img"
-          src="../modulo-1/clase-html/img/paisaje.jpg"
-          alt="Paisaje usado en la entrada de blog de la primera clase"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">01 · Junio 2022</p>
-          <h2>Primera clase de HTML</h2>
-          <p>
-            Mi primera página: un blog con entradas, una página de la
-            "Frikipedia" sobre Sasuke y una tabla de libros. Todo HTML puro,
-            sin CSS.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Estructura con header, main, section, article y footer</li>
-            <li>Listas ordenadas y desordenadas, imágenes y enlaces con anclas</li>
-            <li>Tablas con thead, tbody, th y td</li>
-          </ul>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>Tablas</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../modulo-1/clase-html/index.html">Ver blog</a>
-            <a href="../modulo-1/clase-html/tabla/tabla.html">Ver tabla</a>
+      <!-- cada proyecto es una tarjeta, el data-tipo dice si es html, css o bootstrap -->
+      <div class="card mb-4" data-tipo="html">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../modulo-1/clase-html/img/paisaje.jpg" alt="Paisaje usado en la entrada de blog de la primera clase" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">01 · Junio 2022</p>
+              <h2 class="h4 card-title">Primera clase de HTML</h2>
+              <p class="card-text">
+                Un blog con entradas, una página de la
+                "Frikipedia" sobre Sasuke y una tabla de libros. Todo HTML puro,
+                sin CSS.
+              </p>
+              <ul>
+                <li>Estructura con header, main, section, article y footer</li>
+                <li>Listas, imágenes y enlaces con anclas</li>
+                <li>Tablas con thead, tbody, th y td</li>
+              </ul>
+              <span class="badge text-bg-secondary">HTML</span>
+              <span class="badge text-bg-secondary">Tablas</span>
+              <div class="mt-3">
+                <a href="../modulo-1/clase-html/index.html" class="btn btn-dark btn-sm">Ver blog</a>
+                <a href="../modulo-1/clase-html/tabla/tabla.html" class="btn btn-outline-dark btn-sm">Ver tabla</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="html">
-        <img
-          class="detalle__img"
-          src="../modulo-1/clase-html/img/codigoparte1.png"
-          alt="Captura del código Arduino del portón automático"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">02 · Junio 2022 · Desafío final del curso de Arduino</p>
-          <h2>Portón automático con Arduino</h2>
-          <p>
-            Documenté un portón que abre y cierra con un control remoto IR. El
-            circuito lo armé en Tinkercad con un servo, un sensor IR, fines de
-            carrera y una pantalla LCD, y en la página explico las tres
-            condiciones del código.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Índice con tabla y navegación interna por anclas</li>
-            <li>Video embebido con la simulación del circuito</li>
-            <li>Explicar un proyecto técnico en una página web</li>
-          </ul>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>Video</li>
-            <li>Arduino</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../modulo-1/clase-html/automatismo.html">Ver demo</a>
+      <div class="card mb-4" data-tipo="html">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../modulo-1/clase-html/img/codigoparte1.png" alt="Captura del código Arduino del portón automático" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">02 · Junio 2022 · Desafío final del curso de Arduino</p>
+              <h2 class="h4 card-title">Portón automático con Arduino</h2>
+              <p class="card-text">
+                Una página para presentar un portón que abre y cierra con un
+                control remoto. El circuito lo armé en Tinkercad con un servo,
+                un sensor infrarrojo, fines de carrera y una pantalla LCD, y en
+                la página explico cómo funciona el código.
+              </p>
+              <ul>
+                <li>Índice con tabla y navegación con anclas</li>
+                <li>Video con la simulación del circuito</li>
+              </ul>
+              <span class="badge text-bg-secondary">HTML</span>
+              <span class="badge text-bg-secondary">Video</span>
+              <span class="badge text-bg-secondary">Arduino</span>
+              <div class="mt-3">
+                <a href="../modulo-1/clase-html/automatismo.html" class="btn btn-dark btn-sm">Ver demo</a>
+                <a href="https://github.com/ingeyiyo/automatismo-programacion" class="btn btn-outline-dark btn-sm">Ver código Arduino</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="html css">
-        <img
-          class="detalle__img"
-          src="../modulo-1/practica-html/img/valorant.jpg"
-          alt="Logo de Valorant"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">03 · Junio 2022</p>
-          <h2>Práctica: sitio de Valorant</h2>
-          <p>
-            Un sitio de cinco páginas sobre Valorant con barra de navegación,
-            registro, inicio de sesión y un catálogo de skins con videos de las
-            animaciones.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Primeros estilos: colores, padding, hover en el menú</li>
-            <li>Formularios con radio, checkbox y validación de largo</li>
-            <li>Video local con controles</li>
-          </ul>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Formularios</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../modulo-1/practica-html/index.html">Ver demo</a>
-            <a href="../modulo-1/practica-html/skins.html">Ver skins</a>
+      <div class="card mb-4" data-tipo="html css">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../modulo-1/practica-html/img/valorant.jpg" alt="Logo de Valorant" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">03 · Junio 2022</p>
+              <h2 class="h4 card-title">Práctica: sitio de Valorant</h2>
+              <p class="card-text">
+                Cinco páginas sobre Valorant con barra de navegación, registro,
+                inicio de sesión y un catálogo de skins con videos.
+              </p>
+              <ul>
+                <li>Primeros estilos: colores, padding, hover en el menú</li>
+                <li>Formularios con radio, checkbox y validación de largo</li>
+                <li>Video con controles</li>
+              </ul>
+              <span class="badge text-bg-secondary">HTML</span>
+              <span class="badge text-bg-secondary">CSS</span>
+              <span class="badge text-bg-secondary">Formularios</span>
+              <div class="mt-3">
+                <a href="../modulo-1/practica-html/index.html" class="btn btn-dark btn-sm">Ver demo</a>
+                <a href="../modulo-1/practica-html/skins.html" class="btn btn-outline-dark btn-sm">Ver skins</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="html css">
-        <img
-          class="detalle__img"
-          src="../mi-primera-web/img/html-css.png"
-          alt="Logos de HTML y CSS"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">04 · Mayo 2023 · <span class="estado estado--wip">Esqueleto</span></p>
-          <h2>Mi primera web</h2>
-          <p>
-            La base que usé al retomar el curso: una plantilla con navegación
-            compartida entre páginas, metadatos y una fuente de Google Fonts. El
-            contenido quedó con texto de relleno.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Meta description, keywords, author y favicon</li>
-            <li>Una misma hoja de estilos para todas las páginas</li>
-          </ul>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../mi-primera-web/index.html">Ver demo</a>
+      <div class="card mb-4" data-tipo="html css">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../mi-primera-web/img/html-css.png" alt="Logos de HTML y CSS" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">04 · Mayo 2023 <span class="badge text-bg-warning">Esqueleto</span></p>
+              <h2 class="h4 card-title">Primera web</h2>
+              <p class="card-text">
+                La base que usé cuando retomé el curso: una plantilla con la
+                navegación compartida entre páginas, metadatos y una fuente de
+                Google Fonts. El contenido quedó con texto de relleno.
+              </p>
+              <ul>
+                <li>Meta description, keywords, author y favicon</li>
+                <li>Una misma hoja de estilos para todas las páginas</li>
+              </ul>
+              <span class="badge text-bg-secondary">HTML</span>
+              <span class="badge text-bg-secondary">CSS</span>
+              <div class="mt-3">
+                <a href="../mi-primera-web/index.html" class="btn btn-dark btn-sm">Ver demo</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="html css">
-        <img
-          class="detalle__img"
-          src="../listado-compras/assets/tl081.jpg"
-          alt="Diagrama del amplificador operacional TL081"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">05 · Junio 2023</p>
-          <h2>Listado de compras de electrónica</h2>
-          <p>
-            El proyecto más completo de HTML y CSS. Lo usé de verdad: es la
-            lista de materiales para el TP de Laboratorio de Electrónica 1, con
-            una página por componente (amplificadores, resistencias, diodos,
-            transistores y más).
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Índice con tabla y una página por categoría</li>
-            <li>Formulario de registro con fecha, select, textarea, radio y checkbox</li>
-            <li>Position relative, absolute y fixed (cajas A, B y C y un botón flotante)</li>
-            <li>Flexbox para ordenar las tarjetas de componentes</li>
-          </ul>
-          <ul class="tags">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Formularios</li>
-            <li>Position</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../listado-compras/pages/listacompras.html">Ver lista</a>
-            <a href="../listado-compras/pages/registro.html">Ver formulario</a>
-            <a href="../listado-compras/pages/elementos.html">Ver position</a>
+      <div class="card mb-4" data-tipo="html css">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../listado-compras/assets/tl081.jpg" alt="Diagrama del amplificador operacional TL081" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">05 · Junio 2023</p>
+              <h2 class="h4 card-title">Listado de compras de electrónica</h2>
+              <p class="card-text">
+                El proyecto completo de HTML y CSS. Lo usé de verdad: es la
+                lista de materiales para el TP de Laboratorio de Electrónica 1,
+                con una página por componente (amplificadores, resistencias,
+                diodos, transistores, entre otros).
+              </p>
+              <ul>
+                <li>Índice con tabla y una página por categoría</li>
+                <li>Formulario de registro con fecha, select, textarea, radio y checkbox</li>
+                <li>Position relative, absolute y fixed</li>
+                <li>Flexbox para ordenar las tarjetas de componentes</li>
+              </ul>
+              <span class="badge text-bg-secondary">HTML</span>
+              <span class="badge text-bg-secondary">CSS</span>
+              <span class="badge text-bg-secondary">Formularios</span>
+              <span class="badge text-bg-secondary">Position</span>
+              <div class="mt-3">
+                <a href="../listado-compras/pages/listacompras.html" class="btn btn-dark btn-sm">Ver lista</a>
+                <a href="../listado-compras/pages/registro.html" class="btn btn-outline-dark btn-sm">Ver formulario</a>
+                <a href="../listado-compras/pages/elementos.html" class="btn btn-outline-dark btn-sm">Ver position</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="css">
-        <img
-          class="detalle__img"
-          src="../galeria-funkos/img/groot.jpg"
-          alt="Funko Pop de Groot"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">06 · Junio 2023</p>
-          <h2>Galería Funko Pop</h2>
-          <p>
-            Una galería de 13 Funkos. Las fotos arrancan desenfocadas y se
-            enfocan al pasar el mouse por encima.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Flexbox con flex-wrap para la grilla de fotos</li>
-            <li>Degradados lineales en el encabezado y el fondo</li>
-            <li>Filtros (blur, opacity), sombras y media queries</li>
-          </ul>
-          <ul class="tags">
-            <li>CSS</li>
-            <li>Flexbox</li>
-            <li>Media queries</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../galeria-funkos/index.html">Ver demo</a>
+      <div class="card mb-4" data-tipo="css">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../galeria-funkos/img/groot.jpg" alt="Funko Pop de Groot" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">06 · Junio 2023</p>
+              <h2 class="h4 card-title">Galería de Funkos</h2>
+              <p class="card-text">
+                Una galería de 13 Funkos. Las fotos arrancan borrosas y se
+                enfocan al pasar el mouse por arriba.
+              </p>
+              <ul>
+                <li>Flexbox con flex-wrap para acomodar las fotos</li>
+                <li>Degradados en el encabezado y el fondo</li>
+                <li>Filtros (blur), sombras y media queries</li>
+              </ul>
+              <span class="badge text-bg-secondary">CSS</span>
+              <span class="badge text-bg-secondary">Flexbox</span>
+              <span class="badge text-bg-secondary">Media queries</span>
+              <div class="mt-3">
+                <a href="../galeria-funkos/index.html" class="btn btn-dark btn-sm">Ver demo</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <article class="detalle" data-tipo="bootstrap">
-        <img
-          class="detalle__img"
-          src="../tienda-ropa/img/wmnx.jpg"
-          alt="Logo de la tienda de ropa"
-          loading="lazy"
-        />
-        <div>
-          <p class="etiqueta">07 · 2023 a 2025 · <span class="estado estado--wip">En progreso</span></p>
-          <h2>Bootstrap y tienda de ropa</h2>
-          <p>
-            Primero una plantilla con Bootstrap por CDN y después el arranque
-            de una tienda de ropa con navbar responsive y un login. La tienda
-            todavía no tiene productos cargados.
-          </p>
-          <h3>Practiqué</h3>
-          <ul>
-            <li>Bootstrap 5 por CDN y con archivos locales</li>
-            <li>Navbar con menú hamburguesa en pantallas chicas</li>
-            <li>Formulario de login centrado en una tarjeta</li>
-          </ul>
-          <ul class="tags">
-            <li>Bootstrap</li>
-            <li>Responsive</li>
-          </ul>
-          <div class="proyecto__links">
-            <a href="../tienda-ropa/index.html">Ver tienda</a>
-            <a href="../tienda-ropa/pages/login.html">Ver login</a>
-            <a href="../bootstrap/index.html">Ver plantilla</a>
+      <div class="card mb-4" data-tipo="bootstrap">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="foto-proyecto rounded-start" src="../tienda-ropa/img/wmnx.jpg" alt="Logo de la tienda de ropa" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-muted mb-1">07 · 2023 a 2025 <span class="badge text-bg-warning">En progreso</span></p>
+              <h2 class="h4 card-title">Bootstrap y tienda de ropa</h2>
+              <p class="card-text">
+                Primero una plantilla con Bootstrap por CDN y después el
+                arranque de una tienda de ropa con navbar responsive y login.
+                La tienda todavía no tiene productos cargados.
+              </p>
+              <ul>
+                <li>Bootstrap 5 por CDN y con los archivos descargados</li>
+                <li>Navbar con menú hamburguesa y desplegable</li>
+                <li>Formularios de login y registro en una tarjeta</li>
+              </ul>
+              <span class="badge text-bg-secondary">Bootstrap</span>
+              <span class="badge text-bg-secondary">Responsive</span>
+              <div class="mt-3">
+                <a href="../tienda-ropa/index.html" class="btn btn-dark btn-sm">Ver tienda</a>
+                <a href="../tienda-ropa/pages/login.html" class="btn btn-outline-dark btn-sm">Ver login</a>
+                <a href="../bootstrap/index.html" class="btn btn-outline-dark btn-sm">Ver plantilla</a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
     </main>
 
     <!-- pie de pagina -->
-    <footer class="pie">
-      <div class="contenedor">
-        <span>Juan Pablo Rearte · Tucumán</span>
-        <a href="../index.html">Volver al inicio</a>
-      </div>
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">Juan Pablo Rearte · Tucumán</p>
     </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- script para los filtros -->
     <script>
@@ -301,8 +296,11 @@
         // cuando toco un boton me fijo que filtro tiene
         boton.addEventListener("click", () => {
           const filtro = boton.dataset.filtro;
-          // marco como apretado solo el boton que toque
-          botones.forEach((b) => b.setAttribute("aria-pressed", b === boton));
+          // pinto de negro solo el boton que toque, los demas quedan con borde
+          botones.forEach((b) => {
+            b.classList.toggle("btn-dark", b === boton);
+            b.classList.toggle("btn-outline-dark", b !== boton);
+          });
           // escondo los proyectos que no son de ese tipo (con "todos" se ven todos)
           proyectos.forEach((p) => {
             const tipos = p.dataset.tipo.split(" ");

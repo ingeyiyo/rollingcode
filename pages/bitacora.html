@@ -11,138 +11,153 @@
     <meta name="author" content="Juan Pablo Rearte" />
     <!-- linea para el icono de la pestaña del navegador -->
     <link rel="icon" href="../listado-compras/assets/html.png" type="image/png" />
-    <!-- uso la misma hoja de estilos para las 3 paginas -->
-    <link rel="stylesheet" href="../css/portfolio.css" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <title>Bitácora · Juan Pablo Rearte</title>
   </head>
 
   <body>
-    <!-- cabecera con el logo y la navegacion -->
-    <header class="nav">
-      <div class="contenedor">
-        <a class="nav__logo" href="../index.html">&lt;yiyo<span>/</span>&gt;</a>
-        <nav aria-label="Principal">
-          <!-- aria-current marca en que pagina estoy -->
-          <ul class="nav__links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="bitacora.html" aria-current="page">Bitácora</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Yiyo Rearte</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="bitacora.html">Bitácora</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="contenedor">
-      <!-- portada de la pagina -->
-      <section class="hero">
-        <p class="etiqueta">Bitácora del curso</p>
-        <h1>Cómo fui <em>avanzando</em></h1>
-        <p>
-          Un resumen de cada etapa: qué vimos, qué hice y qué cambiaría si lo
-          tuviera que hacer de nuevo hoy.
-        </p>
-      </section>
+    <main class="container py-5">
+      <h1 class="fw-bold">Bitácora del curso</h1>
+      <p class="lead">
+        Un resumen de cada etapa: qué vimos, qué hice y qué cambiaría si lo
+        tuviera que hacer de nuevo hoy.
+      </p>
 
-      <section class="seccion" style="padding-top: 0">
-        <!-- linea de tiempo, uso una lista ordenada porque va en orden de fechas -->
-        <ol class="linea">
-          <li>
-            <p class="etiqueta">Junio 2022</p>
-            <h3>Las primeras etiquetas</h3>
-            <p>
-              Arranqué con HTML puro: títulos, párrafos, listas, imágenes,
-              tablas y enlaces. Lo más grande de esta etapa fue el desafío del
-              portón automático, donde mezclé lo que sabía de Arduino con lo que
-              estaba aprendiendo de HTML.
-            </p>
-          </li>
-          <li>
-            <p class="etiqueta">Junio 2022</p>
-            <h3>Primeros estilos y formularios</h3>
-            <p>
-              Con la práctica de Valorant empecé a separar el contenido del
-              diseño con una hoja de estilos externa, a usar clases y a armar
-              formularios de registro e inicio de sesión.
-            </p>
-          </li>
-          <li>
-            <p class="etiqueta">Mayo y junio 2023</p>
-            <h3>Maquetado en serio</h3>
-            <p>
-              Retomé el curso y aparecieron position, Flexbox y las media
-              queries. El listado de compras fue el primer sitio que usé para
-              algo real: comprar los materiales del TP de Electrónica.
-            </p>
-          </li>
-          <li>
-            <p class="etiqueta">Junio a octubre 2023</p>
-            <h3>Efectos visuales y Bootstrap</h3>
-            <p>
-              En la galería de Funkos jugué con filtros, degradados y hover.
-              Después vino Bootstrap: entender que no hace falta escribir todo
-              el CSS a mano para tener una barra de navegación responsive.
-            </p>
-          </li>
-          <li>
-            <p class="etiqueta">2025</p>
-            <h3>Volver a encarar un proyecto propio</h3>
-            <p>
-              La tienda de ropa es el proyecto en el que estoy ahora: Bootstrap
-              con archivos locales, un login y la idea de sumar catálogo de
-              productos.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="seccion">
-        <div class="seccion__titulo">
-          <h2>Lo que haría distinto hoy</h2>
+      <!-- cada etapa en un item de la lista, van en orden de fechas -->
+      <div class="list-group mb-5">
+        <div class="list-group-item">
+          <small class="text-muted">Junio 2022</small>
+          <h2 class="h5 mt-1">Las primeras etiquetas</h2>
+          <p class="mb-1">
+            Arranqué con HTML puro: títulos, párrafos, listas, imágenes, tablas
+            y enlaces. Lo más grande de esta etapa fue la página del portón
+            automático, donde mezclé lo que sabía de Arduino con lo que estaba
+            aprendiendo de HTML.
+          </p>
         </div>
-        <!-- cosas que hacia mal al principio y como las hago ahora -->
-        <div class="comparacion">
-          <article>
-            <p class="etiqueta">Rutas</p>
-            <h3>Relativas, no absolutas</h3>
-            <p>
-              Usaba rutas que empezaban con "/" porque andaban en Live Server,
-              pero se rompen al publicar el sitio en una subcarpeta.
-            </p>
-            <pre>&lt;!-- antes --&gt;
+        <div class="list-group-item">
+          <small class="text-muted">Junio 2022</small>
+          <h2 class="h5 mt-1">Primeros estilos y formularios</h2>
+          <p class="mb-1">
+            Con la práctica de Valorant empecé a separar el contenido del diseño
+            con una hoja de estilos aparte, a usar clases y a armar formularios
+            de registro e inicio de sesión.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <small class="text-muted">Mayo y junio 2023</small>
+          <h2 class="h5 mt-1">Maquetado en serio</h2>
+          <p class="mb-1">
+            Retomé el curso y aparecieron position, Flexbox y las media queries.
+            El listado de compras fue el primer sitio que usé para algo real:
+            comprar los materiales del TP de Electrónica.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <small class="text-muted">Junio a octubre 2023</small>
+          <h2 class="h5 mt-1">Efectos y Bootstrap</h2>
+          <p class="mb-1">
+            En la galería de Funkos jugué con filtros, degradados y hover.
+            Después vino Bootstrap y me di cuenta de que no hace falta escribir
+            todo el CSS a mano para tener una navbar que ande en el celular.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <small class="text-muted">2025</small>
+          <h2 class="h5 mt-1">Un proyecto propio</h2>
+          <p class="mb-1">
+            La tienda de ropa es en lo que estoy ahora: Bootstrap descargado, un
+            login y la idea de sumar el catálogo de productos. Esta página
+            también la rehice con Bootstrap.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="mb-4">Lo que haría distinto hoy</h2>
+      <!-- cosas que hacia mal al principio y como las hago ahora -->
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">Rutas relativas</h3>
+              <p class="card-text">
+                Usaba rutas que empezaban con "/" porque andaban en Live Server,
+                pero se rompen cuando subís el sitio a una subcarpeta.
+              </p>
+<pre>&lt;!-- antes --&gt;
 &lt;link href="/css/style.css"&gt;
 &lt;!-- ahora --&gt;
 &lt;link href="../css/style.css"&gt;</pre>
-          </article>
-          <article>
-            <p class="etiqueta">Formularios</p>
-            <h3>Cada label con su input</h3>
-            <p>
-              Repetía el mismo id en varios campos. Cada id tiene que ser único
-              para que el label funcione y el formulario sea accesible.
-            </p>
-            <pre>&lt;label for="email2"&gt;Repetí el email&lt;/label&gt;
-&lt;input type="email" id="email2"&gt;</pre>
-          </article>
-          <article>
-            <p class="etiqueta">Imágenes</p>
-            <h3>Textos alternativos reales</h3>
-            <p>
-              Muchas imágenes tenían el alt vacío o con el nombre del archivo.
-              El alt tiene que describir la imagen para quien no la ve.
-            </p>
-            <pre>&lt;img src="groot.jpg"
-     alt="Funko Pop de Groot"&gt;</pre>
-          </article>
+            </div>
+          </div>
         </div>
-      </section>
+        <div class="col-12 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">Un id para cada input</h3>
+              <p class="card-text">
+                Repetía el mismo id en varios campos. Cada id tiene que ser
+                único para que el label funcione.
+              </p>
+<pre>&lt;label for="email2"&gt;Repetí el email&lt;/label&gt;
+&lt;input type="email" id="email2"&gt;</pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">El alt de las imágenes</h3>
+              <p class="card-text">
+                Muchas imágenes tenían el alt vacío o con el nombre del archivo.
+                Tiene que describir la imagen para el que no la puede ver.
+              </p>
+<pre>&lt;img src="groot.jpg"
+     alt="Funko Pop de Groot"&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- pie de pagina -->
-    <footer class="pie">
-      <div class="contenedor">
-        <span>Juan Pablo Rearte · Tucumán</span>
-        <a href="../index.html">Volver al inicio</a>
-      </div>
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">Juan Pablo Rearte · Tucumán</p>
     </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
