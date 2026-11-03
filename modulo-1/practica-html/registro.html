@@ -1,86 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/valorant.jpg" type="image/jpeg" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Valorant · Registro</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="inicio">
-            <a href="index.html">Valorant</a>
-            <a href="skins.html">Mejores Skins</a>
-            <a href="registro.html">Registrarse</a>
-            <a href="iniciosesion.html">Inicion Sesion</a>
-            <a href="position.html">Posicion</a>
-        </nav>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="skins.html">Mejores skins</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="registro.html">Registrarse</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="position.html">Position</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-        <section class="encabezado">
-            <h1>Valorant GOD HTML5 / CSS3</h1>
-            <p>Comienzo de pagina con <b>HTML5 y CSS3</b> </p>
-            
-        </section>
-        
-        <section>
-            <h2>Registro</h2>
-            <form>
-                <div>
-                    <label for="usuario">Usuario: </label>
-                    <input type="text" id="usuario" name="usuario" maxlength="15" minlength="4" placeholder="pepito123" required>
-                </div>
-                <div>
-                    <!-- <label>ejemplo</label>
-                    <input type="number"> -->
-                    <label for="contrasena">Contraseña: </label>
-                    <input type="password" id="contrasena" name="contrasena" maxlength="15" minlength="4" required>
-                </div>
-                <div>
-                    <label for="correo">Correo Electronico: </label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@email.com" required>
-                </div>
-                <!-- <div>
-                    <label>Comentarios: </label>
-                    <textarea placeholder="ingrese algun comentario" cols="30" rows="5"></textarea>
-                </div>
-                <div>
-                    <label>Como nos conociste</label>
-                    <select>
-                        <option></option>
-                        <option value="">hola</option>
-                        <option>tumama mauri</option>
-                        <option>tumama flori</option>
-                    </select>
-                </div> -->
-                <p>¿Tiene conocimientos previos de programación?</p>
-                <div>
-                    <input type="radio" id="progSi" name="grupo" value="si">
-                    <label for="progSi">Si</label>
-                    <input type="radio" id="progNo" name="grupo" value="no">
-                    <label for="progNo">No</label>
-                </div>
-                <p>¿Quiere suscribirse a nuestro newsletter?</p>
-                <div>
-                    <input type="checkbox" id="newsDiario" name="newsletter" value="diario">
-                    <label for="newsDiario">Newsletter diario</label>
-                    <input type="checkbox" id="newsSemanal" name="newsletter" value="semanal">
-                    <label for="newsSemanal">Newsletter semanal</label>
-                </div>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
 
+    <main>
+      <section class="encabezado">
+        <h1 class="display-5">Registro</h1>
+        <p class="lead mb-0">Armate una cuenta para guardar tus skins favoritas</p>
+      </section>
+
+      <section class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <!-- formulario dentro de una tarjeta, el required no deja mandarlo vacio -->
+            <form class="card">
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="usuario" class="form-label">Usuario</label>
+                  <input type="text" class="form-control" id="usuario" name="usuario" minlength="4" maxlength="15" placeholder="pepito123" required />
+                </div>
+                <div class="mb-3">
+                  <label for="contrasena" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="contrasena" name="contrasena" minlength="4" maxlength="15" required />
+                  <div class="form-text text-light">Entre 4 y 15 caracteres.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@email.com" required />
+                </div>
+                <div class="mb-3">
+                  <label for="rango" class="form-label">¿En qué rango estás?</label>
+                  <select class="form-select" id="rango" name="rango">
+                    <option value="">Elegí uno</option>
+                    <option>Hierro</option>
+                    <option>Bronce</option>
+                    <option>Plata</option>
+                    <option>Oro</option>
+                    <option>Platino</option>
+                    <option>Diamante</option>
+                    <option>Ascendente</option>
+                    <option>Inmortal</option>
+                    <option>Radiante</option>
+                  </select>
+                </div>
+
+                <p class="mb-1">¿Tenés conocimientos de programación?</p>
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="progSi" name="programacion" value="si" />
+                    <label class="form-check-label" for="progSi">Sí</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="progNo" name="programacion" value="no" />
+                    <label class="form-check-label" for="progNo">No</label>
+                  </div>
+                </div>
+
+                <p class="mb-1">¿Querés recibir el newsletter?</p>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsDiario" name="newsletter" value="diario" />
+                    <label class="form-check-label" for="newsDiario">Newsletter diario</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsSemanal" name="newsletter" value="semanal" />
+                    <label class="form-check-label" for="newsSemanal">Newsletter semanal</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-valorant w-100">Registrarme</button>
+                <p class="text-center mt-3 mb-0">¿Ya tenés cuenta? <a href="iniciosesion.html" class="link-light">Iniciá sesión</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
-        <p>&copy; Juan Pablo Rearte, alias Yiyo. Todos los derechos reservados</p>
+
+    <footer class="footer text-center py-3">
+      <p class="mb-0">&copy; Juan Pablo Rearte (Yiyo). Página de práctica, no tiene nada que ver con Riot Games.</p>
     </footer>
 
-
-</body>
-
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

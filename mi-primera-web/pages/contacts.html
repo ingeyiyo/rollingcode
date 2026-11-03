@@ -2,32 +2,54 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../img/descarga.jpeg" type="image/jpeg" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Contacts</title>
+    <title>Contacto</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="../index.html">Inicio</a>
-        <a href="../pages/elements.html" >Elementos</a>
-       <!--  <a href="../pages/positions.html" target="_blank">Positions</a> -->
-        <a href="../pages/contacts.html">Contacto</a>
-        <a href="#">Acerca de nosotros</a>
-        <a href="https://www.youtube.com/" >YouTube</a>
+        <a href="elements.html">Elementos</a>
+        <a href="acerca.html">Sobre mí</a>
+        <a href="contacts.html" class="actual">Contacto</a>
+        <a href="https://github.com/ingeyiyo">GitHub</a>
       </nav>
     </header>
+
     <main>
-      <section>
-        <h4>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          voluptatibus tempore, obcaecati sequi commodi nulla similique debitis.
-          Veritatis dicta laboriosam ducimus voluptatibus animi nihil! Optio
-          ratione modi qui eveniet. Animi.
-        </h4>
-      </section>
+      <h1>Contacto</h1>
+      <p>Dejame un mensaje y te respondo. (Es de práctica, todavía no manda nada).</p>
+
+      <!-- cada label tiene el for igual al id de su input -->
+      <form>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required />
+        </div>
+        <div>
+          <label for="motivo">Motivo</label>
+          <select id="motivo" name="motivo">
+            <option value="consulta">Consulta</option>
+            <option value="trabajo">Propuesta de trabajo</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
     </main>
+
+    <footer>
+      <p>Juan Pablo Rearte · 2023</p>
+    </footer>
   </body>
 </html>

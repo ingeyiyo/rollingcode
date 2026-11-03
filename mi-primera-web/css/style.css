@@ -1,18 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
+/* quito margen de la pagina, el texto va con una fuente que se lea bien */
 body {
     margin: 0%;
-    font-family: 'Fascinate', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdf6f0;
+    color: #2b2b2b;
+    line-height: 1.5;
 }
+
+/* la fascinate la dejo para los titulos */
+h1,
+h2 {
+    font-family: 'Fascinate', cursive;
+    font-weight: normal;
+}
+
+/* navegacion */
 nav {
     background-color: rosybrown;
     padding: 15px 30px;
+    text-align: center;
 }
-nav a{
+
+nav a {
     color: black;
     text-decoration: none;
     padding: 15px;
+    display: inline-block;
 }
-nav a:hover{
-    background-color: red;    
+
+nav a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* el link de la pagina donde estoy */
+.actual {
+    background-color: brown;
+    color: white;
+}
+
+/* contenido centrado con un ancho maximo */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* bloque de presentacion de arriba */
+.presentacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.presentacion img {
+    width: 200px;
+}
+
+/* cajitas en fila con flexbox */
+.cajas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.caja {
+    flex: 1 1 250px;
+    background-color: white;
+    border-left: 5px solid rosybrown;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.caja h3 {
+    margin-top: 0;
+}
+
+/* tabla estilo excel */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rosybrown;
+}
+
+tr:nth-child(even) {
+    background-color: #f5ebe6;
+}
+
+blockquote {
+    border-left: 5px solid brown;
+    margin-left: 0;
+    padding-left: 15px;
+    font-style: italic;
+}
+
+/* formulario de contacto */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+footer {
+    background-color: rosybrown;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* tamaño celular */
+@media (max-width: 600px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 8px;
+    }
 }

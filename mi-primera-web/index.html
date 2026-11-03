@@ -2,17 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
     <meta name="description" content="Pagina web para practica de html y css" />
+    <!-- linea para palabras claves del buscador -->
     <meta name="keywords" content="html, css" />
-
     <meta name="author" content="Juan Pablo" />
-    <link
-      rel="shortcut icon"
-      href="img/css-html.png"
-      type="image/png"
-    />
+    <link rel="shortcut icon" href="img/css-html.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Mi Primera Web</title>
   </head>
@@ -20,19 +16,63 @@
   <body>
     <header>
       <nav>
-        <a href="index.html" >Inicio</a>
-        <a href="pages/elements.html" >Elementos</a>
-        <!-- <a href="pages/positions.html" target="_blank">Positions</a> -->
-        <a href="pages/contacts.html" >Contacto</a>
-        <a href="#">Acerca de nosotros</a>
-        <a href="https://www.youtube.com/">YouTube</a>
+        <a href="index.html" class="actual">Inicio</a>
+        <a href="pages/elements.html">Elementos</a>
+        <a href="pages/acerca.html">Sobre mí</a>
+        <a href="pages/contacts.html">Contacto</a>
+        <a href="https://github.com/ingeyiyo">GitHub</a>
       </nav>
     </header>
 
     <main>
-      
+      <!-- foto y texto uno al lado del otro con flexbox -->
+      <section class="presentacion">
+        <img src="img/html-css.png" alt="Logos de HTML y CSS" />
+        <div>
+          <h1>Mi primera web</h1>
+          <p>
+            Esta es la plantilla que armé cuando retomé el curso en 2023. La idea
+            era tener una base con la navegación y los estilos compartidos para
+            no repetir todo en cada página.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Qué hay en cada página</h2>
+        <!-- una cajita por pagina, se acomodan solas con flex-wrap -->
+        <div class="cajas">
+          <article class="caja">
+            <h3>Elementos</h3>
+            <p>Una muestra de las etiquetas de HTML que fui usando: títulos, listas, tablas y citas.</p>
+            <a href="pages/elements.html">Ir a elementos</a>
+          </article>
+          <article class="caja">
+            <h3>Sobre mí</h3>
+            <p>Quién soy, qué estudio y qué me gusta hacer.</p>
+            <a href="pages/acerca.html">Ir a sobre mí</a>
+          </article>
+          <article class="caja">
+            <h3>Contacto</h3>
+            <p>Un formulario para mandarme un mensaje.</p>
+            <a href="pages/contacts.html">Ir a contacto</a>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Lo que practiqué</h2>
+        <ul>
+          <li>Las etiquetas meta del head: description, keywords, author y el ícono de la pestaña.</li>
+          <li>Una sola hoja de estilos para todas las páginas.</li>
+          <li>Una fuente de Google Fonts (Fascinate) para los títulos.</li>
+          <li>Flexbox para acomodar las cajas y una media query para el celular.</li>
+        </ul>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>Juan Pablo Rearte · 2023</p>
+    </footer>
   </body>
 </html>

@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/valorant.jpg" type="image/jpeg" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Valorant · Position</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="inicio">
-            <a href="index.html">Valorant</a>
-            <a href="skins.html">Mejores Skins</a>
-            <a href="registro.html">Registrarse</a>
-            <a href="iniciosesion.html">Inicion Sesion</a>
-            
-
-        </nav>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="skins.html">Mejores skins</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="position.html">Position</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    
+
     <main>
-        <section class="encabezado">
-            <h1>Valorant GOD HTML5 / CSS3</h1>
-            <p>Comienzo de pagina con <b>HTML5 y CSS3</b> </p>
-            
-        </section>
+      <section class="encabezado">
+        <h1 class="display-5">Position</h1>
+        <p class="lead mb-0">Práctica de position en CSS</p>
+      </section>
 
-        <section>
-           <!-- prox clase -->
-            <div class="caja" id="cajaroja">flori</div>
-            <div class="caja" id="cajaazul">mauriti</div>
-            <div class="caja">yiyox</div>
-        </section>
+      <section class="container py-5">
+        <p>
+          La zona punteada tiene <code>position: relative</code>, así las cajas
+          de adentro se ubican tomándola como referencia y no a toda la página.
+        </p>
+        <ul>
+          <li>La roja tiene <code>absolute</code> pegada arriba a la izquierda.</li>
+          <li>La azul tiene <code>absolute</code> pegada abajo a la derecha.</li>
+          <li>La verde tiene <code>relative</code>: se corre desde donde estaría normalmente.</li>
+        </ul>
 
+        <!-- la zona es la referencia de las cajas absolute -->
+        <div class="zona mt-4">
+          <div class="caja" id="cajaroja">absolute</div>
+          <div class="caja" id="cajaazul">absolute</div>
+          <div class="caja" id="cajaverde">relative</div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
-        <p>&copy; Juan Pablo Rearte, alias Yiyo. Todos los derechos reservados</p>
+
+    <footer class="footer text-center py-3">
+      <p class="mb-0">&copy; Juan Pablo Rearte (Yiyo). Página de práctica, no tiene nada que ver con Riot Games.</p>
     </footer>
 
-
-</body>
-
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

@@ -2,38 +2,115 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Pagina de practica sobre Valorant hecha con HTML, CSS y Bootstrap." />
+    <link rel="icon" href="img/valorant.jpg" type="image/jpeg" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Valorant</title>
   </head>
 
   <body>
     <header>
-      <nav class="inicio">
-        <a href="index.html">Valorant</a>
-        <a href="skins.html">Mejores Skins</a>
-        <a href="registro.html">Registrarse</a>
-        <a href="iniciosesion.html">Inicion Sesion</a>
-        <a href="position.html">Posicion</a>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="skins.html">Mejores skins</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="position.html">Position</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="encabezado">
-        <h1>Valorant GOD HTML5 / CSS3</h1>
-        <p>Comienzo de pagina con <b>HTML5 y CSS3</b></p>
+        <h1 class="display-4">Valorant</h1>
+        <p class="lead mb-0">El shooter táctico 5 contra 5 de Riot Games</p>
       </section>
 
-      <section>
-        
-        <img class="imagen" src="img/valorant.jpg" alt="logo de valorant" />
+      <!-- foto a la izquierda y texto a la derecha, en celular quedan uno abajo del otro -->
+      <section class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-5 text-center">
+            <img class="img-fluid rounded" src="img/valorant.jpg" alt="Logo de Valorant" />
+          </div>
+          <div class="col-12 col-md-7">
+            <h2>¿De qué se trata?</h2>
+            <p>
+              Son dos equipos de 5 jugadores: uno ataca y tiene que plantar la
+              bomba (el Spike) y el otro defiende. Gana el primero que llega a
+              13 rondas. Salió en 2020.
+            </p>
+            <p>
+              Cada jugador elige un agente con habilidades propias, pero lo que
+              más pesa es la puntería y ponerse de acuerdo con el equipo.
+            </p>
+            <a href="skins.html" class="btn btn-valorant">Ver las mejores skins</a>
+          </div>
+        </div>
+      </section>
 
-        <h2>Pagina Principal de Valorant</h2>
+      <!-- los 4 roles de los agentes, una tarjeta por rol -->
+      <section class="container pb-5">
+        <h2 class="text-center mb-4">Los roles de los agentes</h2>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Duelistas</h3>
+                <p class="card-text">Entran primero y buscan las kills.</p>
+                <p class="text-muted mb-0">Jett, Reyna, Phoenix</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Iniciadores</h3>
+                <p class="card-text">Sacan información y abren el camino para el equipo.</p>
+                <p class="text-muted mb-0">Sova, Breach, Skye</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Controladores</h3>
+                <p class="card-text">Tapan la visión con humos para poder avanzar.</p>
+                <p class="text-muted mb-0">Brimstone, Omen, Viper</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Centinelas</h3>
+                <p class="card-text">Cuidan un sector del mapa y la espalda del equipo.</p>
+                <p class="text-muted mb-0">Sage, Killjoy, Cypher</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="footer">
-      <p>&copy; Juan Pablo Rearte, alias Yiyo. Todos los derechos reservados</p>
+
+    <footer class="footer text-center py-3">
+      <p class="mb-0">&copy; Juan Pablo Rearte (Yiyo). Página de práctica, no tiene nada que ver con Riot Games.</p>
     </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

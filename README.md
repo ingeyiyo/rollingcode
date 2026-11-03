@@ -12,8 +12,8 @@ Si abrís el `index.html` tenés una página con todos los proyectos ordenados, 
 |---|----------|---------|---------------|
 | 1 | Primera clase de HTML | `modulo-1/clase-html` | Etiquetas básicas, listas, tablas e imágenes |
 | 2 | Página del portón automático (mi desafío final de Arduino) | `modulo-1/clase-html/automatismo.html` | Tablas, anclas y video |
-| 3 | Página de Valorant | `modulo-1/practica-html` | Primeros estilos y formularios |
-| 4 | Mi primera web | `mi-primera-web` | Una plantilla con varias páginas |
+| 3 | Página de Valorant | `modulo-1/practica-html` | Primeros estilos y formularios, después pasada a Bootstrap |
+| 4 | Mi primera web | `mi-primera-web` | Una plantilla de varias páginas con Flexbox |
 | 5 | Listado de compras de electrónica | `listado-compras` | Formularios, position y flexbox |
 | 6 | Galería de Funkos | `galeria-funkos` | Flexbox, filtros y media queries |
 | 7 | Bootstrap y tienda de ropa | `bootstrap`, `tienda-ropa` | Bootstrap 5, navbar con menú hamburguesa, login |

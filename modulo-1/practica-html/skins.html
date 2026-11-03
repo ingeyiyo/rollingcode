@@ -1,115 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/valorant.jpg" type="image/jpeg" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Valorant · Mejores skins</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="inicio">
-            <a href="index.html">Valorant</a>
-            <a href="skins.html">Mejores Skins</a>
-            <a href="registro.html">Registrarse</a>
-            <a href="iniciosesion.html">Inicion Sesion</a>
-            <a href="position.html">Posicion</a>
-        </nav>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="skins.html">Mejores skins</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="position.html">Position</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
+
     <main>
-        <section class="encabezado" >
-            <h1>Valorant GOD HTML5 / CSS3</h1>
-            <p>Comienzo de pagina con <b>HTML5 y CSS3</b> </p>
-        </section>
+      <section class="encabezado">
+        <h1 class="display-5">Las mejores skins</h1>
+        <p class="lead mb-0">Mi top de packs, con video de las animaciones</p>
+      </section>
 
-        <section>
-            <h2>Las Skins mas GOD de Valorant</h2>
-            <div class="menuskins">
-                <table border cellpadding="4" cellspacing="0">
-                    <thead>
-                        <th>Menu de Skins</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#elderflame">Elderflame</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#origin">Origin</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#magepunk">Magepunk</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#recon">Recon</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#ion">Ion</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#oni">Oni</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="#Reaver">Reaver</a> </td>
-                        </tr>
-                        <tr>
-                            <td> <a href="#zed">Zed</a> </td>
-                        </tr>
-                    </tbody>
-                </table>
+      <section class="container py-5">
+        <div class="row g-4">
+          <!-- menu con anclas para saltar a cada pack -->
+          <div class="col-12 col-lg-3">
+            <table class="table table-dark table-striped text-center">
+              <thead>
+                <tr><th>Menú de skins</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><a href="#spectrum">Spectrum</a></td></tr>
+                <tr><td><a href="#reaver">Reaver</a></td></tr>
+                <tr><td><a href="#otras">Elderflame</a></td></tr>
+                <tr><td><a href="#otras">Oni</a></td></tr>
+                <tr><td><a href="#otras">Ion</a></td></tr>
+                <tr><td><a href="#otras">Magepunk</a></td></tr>
+                <tr><td><a href="#otras">Recon</a></td></tr>
+                <tr><td><a href="#otras">Origin</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-12 col-lg-9">
+            <!-- los dos packs que tienen video -->
+            <article class="card mb-4" id="spectrum">
+              <div class="card-body">
+                <h2 class="h3 card-title">Pack Spectrum</h2>
+                <p>Viene con 5 armas:</p>
+                <ol>
+                  <li>Phantom</li>
+                  <li>Classic</li>
+                  <li>Bulldog</li>
+                  <li>Guardian</li>
+                  <li>Cuchillo</li>
+                </ol>
+                <p>El cuchillo tiene animaciones, se ven en este video:</p>
+                <!-- ratio de bootstrap para que el video se achique en el celular -->
+                <div class="ratio ratio-16x9">
+                  <video src="video/cuchillo-spectrum.mp4" controls></video>
+                </div>
+              </div>
+            </article>
+
+            <article class="card mb-4" id="reaver">
+              <div class="card-body">
+                <h2 class="h3 card-title">Pack Reaver</h2>
+                <p>Viene con 5 armas:</p>
+                <ol>
+                  <li>Vandal</li>
+                  <li>Operator</li>
+                  <li>Sheriff</li>
+                  <li>Guardian</li>
+                  <li>Cuchillo</li>
+                </ol>
+                <p>El cuchillo también tiene animaciones:</p>
+                <div class="ratio ratio-16x9">
+                  <video src="video/cuchillo-reaver.mp4" controls></video>
+                </div>
+              </div>
+            </article>
+
+            <!-- el resto, sin video -->
+            <h2 class="h3 mb-3" id="otras">Otras que me gustan</h2>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Elderflame</h3>
+                    <p class="mb-0">Armas con forma de dragón que echan fuego. De las más caras del juego.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Oni</h3>
+                    <p class="mb-0">Inspirada en las máscaras de demonio japonesas, en rojo y negro.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Ion</h3>
+                    <p class="mb-0">Estilo futurista, con luces y sonidos de energía.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Magepunk</h3>
+                    <p class="mb-0">Mezcla de magia y máquinas, con rayos eléctricos.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Recon</h3>
+                    <p class="mb-0">Estilo militar, simple y limpia.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h3 class="h5">Origin</h3>
+                    <p class="mb-0">Diseño de ciencia ficción que cambia de color.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <article id="zed">
-                <header>
-                    <h3>Pack de Skin <u>Spectrum</u></h3>
-                    <p>
-                    <h5>Este pack de skines cuenta con 5 armas:</h5>
-
-                    <ol type="1" class="tiposarmas">
-                        <li><a href="#phantom">Phantom</a></li>
-                        <li><a href="#clasic">Clasic</a></li>
-                        <li><a href="#buldog">Buldog</a></li>
-                        <li><a href="#guardian">Guardin</a> </li>
-                        <li><a href="#cuchillozed">Cuchillo / Espada</a> </li>
-                    </ol>
-
-                    </p>
-                </header>
-                <div id="cuchillozed">
-                    <p>El <u>cuchillo o espada</u> cuenta con animaciones, se muestran en el siguiente video
-                        <video src="video/cuchillo-spectrum.mp4" height="225" width="400"
-                            controls></video>
-                    </p>
-                </div>
-                <hr>
-            </article>
-
-            <article id="Reaver">
-                <header>
-                    <h3>Pack de Skin <u>Reaver</u></h3>
-                    <ol type="1">
-                        <li><a href="#vandal">Phantom</a></li>
-                        <li><a href="#operator">Clasic</a></li>
-                        <li><a href="#sherif">Buldog</a></li>
-                        <li><a href="#cuchilloreaver">Cuchillo / Espada</a> </li>
-                    </ol>
-                </header>
-                <div id="cuchilloreaver">
-                    <p>El <u>cuchillo o espada</u> cuenta con animaciones, se muestran en el siguiente video
-                        <video src="video/cuchillo-reaver.mp4" height="225" width="400" controls></video>
-                    </p>
-                </div>
-            </article>
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
-        
-        <p>&copy; Juan Pablo Rearte, alias Yiyo. Todos los derechos reservados</p>
+
+    <footer class="footer text-center py-3">
+      <p class="mb-0">&copy; Juan Pablo Rearte (Yiyo). Página de práctica, no tiene nada que ver con Riot Games.</p>
     </footer>
 
-
-</body>
-
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
