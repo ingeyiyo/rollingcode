@@ -1,6 +1,6 @@
 # Mis proyectos del curso de RollingCode
 
-Hola, soy Juan Pablo Rearte (Yiyo), de Tucumán. Acá subí todo lo que fui haciendo en el curso de desarrollo web de RollingCode School, comisión 1586049.
+Hola, soy Juan Pablo Rearte (Yiyo), de Tucumán. Acá subí todo lo que fui haciendo en el curso de desarrollo web de RollingCode School.
 
 Arranqué en 2022 sin saber ni qué era una etiqueta, lo dejé un tiempo, lo retomé en 2023 y en 2025 volví a meterle con un proyecto propio. Por eso hay de todo: cosas muy básicas del principio y otras más armadas. Las dejé todas a propósito, porque la idea es que se vea cómo fui avanzando.
 
@@ -11,7 +11,7 @@ Si abrís el `index.html` tenés una página con todos los proyectos ordenados, 
 | # | Proyecto | Carpeta | Qué practiqué |
 |---|----------|---------|---------------|
 | 1 | Primera clase de HTML | `modulo-1/clase-html` | Etiquetas básicas, listas, tablas e imágenes |
-| 2 | Portón automático (desafío final del módulo 1) | `modulo-1/clase-html/automatismo.html` | Tablas, anclas y video |
+| 2 | Página del portón automático (mi desafío final de Arduino) | `modulo-1/clase-html/automatismo.html` | Tablas, anclas y video |
 | 3 | Página de Valorant | `modulo-1/practica-html` | Primeros estilos y formularios |
 | 4 | Mi primera web | `mi-primera-web` | Una plantilla con varias páginas |
 | 5 | Listado de compras de electrónica | `listado-compras` | Formularios, position y flexbox |
@@ -20,7 +20,7 @@ Si abrís el `index.html` tenés una página con todos los proyectos ordenados, 
 
 ## Los que más me gustan
 
-**El portón automático.** Fue el desafío final del primer módulo. Armé en Tinkercad un portón que se abre y se cierra con un control remoto: un Arduino, un servo que mueve el portón, un sensor infrarrojo para el control, dos interruptores que hacen de fines de carrera (Tinkercad no tiene fines de carrera, así que los simulé así) y una pantalla LCD que te dice si está abriendo o cerrando. La página explica cómo funciona el código y tiene un video de la simulación.
+**El portón automático.** Fue el desafío final de un curso de Arduino que hice al mismo tiempo, y en RollingCode armé la página para presentarlo. En Tinkercad hice un portón que se abre y se cierra con un control remoto: un Arduino, un servo que mueve el portón, un sensor infrarrojo para el control, dos interruptores que hacen de fines de carrera (Tinkercad no tiene fines de carrera, así que los simulé así) y una pantalla LCD que te dice si está abriendo o cerrando. La página explica cómo funciona el código y tiene un video de la simulación. Los programas de ese curso están en mi repo de Arduino.
 
 **El listado de compras.** Lo usé de verdad: es la lista de materiales que tenía que comprar para el TP de Laboratorio de Electrónica 1, con una página para cada componente. Ahí también practiqué un formulario de registro con casi todos los tipos de input.
 
