@@ -2,44 +2,75 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/html.png" type="image/png" />
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Lista de materiales para el TP de Laboratorio de Electrónica 1." />
+    <!-- linea para palabras claves del buscador -->
+    <meta name="keywords" content="electronica, componentes, laboratorio" />
+    <!-- linea para el icono de la pestaña del navegador -->
+    <link rel="shortcut icon" href="../assets/componentes-pasivos.png" type="image/png" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Elementos</title>
+    <title>Position · Lista de Electrónica</title>
   </head>
+
   <body>
     <header>
-        <nav class="inicio">
-          <a href="../pages/listacompras.html">Listado de Compras</a>
-          <a href="../pages/elementos.html">Elementos</a>
-          <a href="../pages/contacto.html">Contacto</a>
-          <a href="../pages/iniciosesion.html">Inicio de Sesion</a>
-          <a href="../pages/registro.html">Registro</a>
-        </nav>
-      </header>
-    <section class="clase1">
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Lista de Electrónica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="listacompras.html">Lista de compras</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="elementos.html">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-      <h1 id="titulo">Mi primera web</h1>
-      <p id="textoInicio">Comienzo de primera pagina web con html5 y css</p>
-      
-      <div id="articlHeading">
-        <h1 id="hdp">Heading nivel 1</h1>
-        <h2>Heading nivel 2</h2>
-        <h3>Heading nivel 3</h3>
-        <h4>Heading nivel 4</h4>
-        <h5>Heading nivel 5</h5>
-        <h6>Heading nivel 6</h6>
-      </div>
-    </section>
-    <section id="padrePosition">
-      <article id="cajaRoja" class="box">A</article>
-      <article id="cajaAzul" class="box">B</article>
-      <article id="cajaVerde" class="box">C</article>
-    </section>
-    <footer><p>&copy;Derechos reservados</p></footer>
+    <main>
+      <section class="titulo">
+        <h1 class="display-6">Position</h1>
+        <p class="lead mb-0">Práctica de position en CSS</p>
+      </section>
+
+      <section class="container py-4">
+        <p>
+          El recuadro punteado tiene <code>position: relative</code>, así las
+          cajas de adentro se ubican tomándolo como referencia.
+        </p>
+        <ul>
+          <li><strong>A</strong> tiene <code>absolute</code> y un <code>z-index</code> para quedar arriba de B.</li>
+          <li><strong>B</strong> tiene <code>absolute</code> y se monta sobre A.</li>
+          <li><strong>C</strong> tiene <code>relative</code>: se corre desde donde estaría normalmente.</li>
+          <li>El botón rojo de "Volver" de las páginas de componentes tiene <code>fixed</code>: queda siempre en el mismo lugar aunque bajes.</li>
+        </ul>
+
+        <!-- el padre es la referencia de las cajas absolute -->
+        <section id="padrePosition" class="mt-4">
+          <article id="cajaRoja" class="box">A</article>
+          <article id="cajaAzul" class="box">B</article>
+          <article id="cajaVerde" class="box">C</article>
+        </section>
+      </section>
+
+    </main>
+
+    <footer class="text-center py-3 mt-5">
+      <p class="mb-0">Juan Pablo Rearte · Laboratorio de Electrónica 1</p>
+    </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

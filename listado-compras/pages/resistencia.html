@@ -2,54 +2,105 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="description" content="" />
-
-    <meta name="keywords" content="" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../assets/componentes-pasivos.png"
-      type="image/png"
-    />
-
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Lista de materiales para el TP de Laboratorio de Electrónica 1." />
+    <!-- linea para palabras claves del buscador -->
+    <meta name="keywords" content="electronica, componentes, laboratorio" />
+    <!-- linea para el icono de la pestaña del navegador -->
+    <link rel="shortcut icon" href="../assets/componentes-pasivos.png" type="image/png" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Listado de Compras Electronica</title>
+    <title>Resistencias · Lista de Electrónica</title>
   </head>
 
-  <body class="BodyListado">
+  <body>
     <header>
-      <nav class="inicio">
-        <a href="../pages/listacompras.html">Listado de Compras</a>
-        <a href="../pages/elementos.html">Elementos</a>
-        <a href="../pages/contacto.html">Contacto</a>
-        <a href="../pages/iniciosesion.html">Inicio de Sesion</a>
-        <a href="../pages/registro.html">Registro</a>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Lista de Electrónica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="listacompras.html">Lista de compras</a></li>
+              <li class="nav-item"><a class="nav-link" href="elementos.html">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
+
     <main>
-      <article>
-        <h1 class="titulo">
-          Compras para Trabajo Practico Laboratorio de Electronica 1
-        </h1>
-        <h4 id="ListadoTitulo">Resistencias</h4>
-        <div class="listadoMateriales">
-          <h6>‐Resistencias de carbón de 1⁄4 W al 5 % (5 de c/u):</h6>
-          <h6>
-            10 Ω, 100 Ω, 220 Ω, 330 Ω, 470 Ω, 560 Ω, 680 Ω, 1 k Ω, 2.2k Ω, 3.3 k
-            Ω, 4.7 k Ω, 5.6 k Ω, 6.8 k Ω 10 k Ω, 22 k Ω, 33 k Ω, 47 k Ω, 56 k Ω,
-            68 k Ω, 100 k Ω, 220 k Ω, 330 k Ω, 470 k Ω, 560 k Ω .
-          </h6>
+      <section class="titulo">
+        <h1 class="display-6">Resistencias</h1>
+        <p class="lead mb-0">De carbón, 1/4 W al 5 %</p>
+      </section>
+
+      <section class="container py-4">
+        <!-- migas de pan para saber donde estoy -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="listacompras.html">Lista de compras</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Resistencias</li>
+          </ol>
+        </nav>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5 card-title">¿Para qué sirven?</h2>
+            <p class="card-text mb-0">Limitan la corriente que pasa por el circuito. El valor se lee con las bandas de colores, y el 5 % es cuánto puede variar del valor que dice.</p>
+          </div>
         </div>
-      </article>
-      <div id="botonFlotante" class="box">
-        <a href="../pages/listacompras.html">inicio</a>
-      </div>
+
+        <h2 class="h4 mb-3">Qué hay que comprar</h2>
+        <p>5 de cada uno de estos 24 valores:</p>
+        <div class="valores mb-3">
+          <span class="badge bg-secondary">10 Ω</span>
+          <span class="badge bg-secondary">100 Ω</span>
+          <span class="badge bg-secondary">220 Ω</span>
+          <span class="badge bg-secondary">330 Ω</span>
+          <span class="badge bg-secondary">470 Ω</span>
+          <span class="badge bg-secondary">560 Ω</span>
+          <span class="badge bg-secondary">680 Ω</span>
+          <span class="badge bg-secondary">1 kΩ</span>
+          <span class="badge bg-secondary">2,2 kΩ</span>
+          <span class="badge bg-secondary">3,3 kΩ</span>
+          <span class="badge bg-secondary">4,7 kΩ</span>
+          <span class="badge bg-secondary">5,6 kΩ</span>
+          <span class="badge bg-secondary">6,8 kΩ</span>
+          <span class="badge bg-secondary">10 kΩ</span>
+          <span class="badge bg-secondary">22 kΩ</span>
+          <span class="badge bg-secondary">33 kΩ</span>
+          <span class="badge bg-secondary">47 kΩ</span>
+          <span class="badge bg-secondary">56 kΩ</span>
+          <span class="badge bg-secondary">68 kΩ</span>
+          <span class="badge bg-secondary">100 kΩ</span>
+          <span class="badge bg-secondary">220 kΩ</span>
+          <span class="badge bg-secondary">330 kΩ</span>
+          <span class="badge bg-secondary">470 kΩ</span>
+          <span class="badge bg-secondary">560 kΩ</span>
+        </div>
+        <p class="text-muted">En total son 120 resistencias.</p>
+      </section>
+
     </main>
-    <footer><p>&copy;Derechos reservados</p></footer>
+
+    <!-- boton fijo para volver a la lista, practica de position fixed -->
+    <a id="botonFlotante" href="listacompras.html">Volver</a>
+
+    <footer class="text-center py-3 mt-5">
+      <p class="mb-0">Juan Pablo Rearte · Laboratorio de Electrónica 1</p>
+    </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

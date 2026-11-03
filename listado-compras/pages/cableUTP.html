@@ -2,49 +2,88 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../assets/componentes-pasivos.png"
-      type="image/png"
-    />
-
+    <!-- linea para descripcion del buscador -->
+    <meta name="description" content="Lista de materiales para el TP de Laboratorio de Electrónica 1." />
+    <!-- linea para palabras claves del buscador -->
+    <meta name="keywords" content="electronica, componentes, laboratorio" />
+    <!-- linea para el icono de la pestaña del navegador -->
+    <link rel="shortcut icon" href="../assets/componentes-pasivos.png" type="image/png" />
+    <!-- bootstrap por cdn, despues mis estilos para pisar lo que quiera cambiar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Listado de Compras Electronica</title>
+    <title>Cable UTP de red · Lista de Electrónica</title>
   </head>
 
-  <body class="BodyListado">
+  <body>
     <header>
-      <nav class="inicio">
-        <a href="../pages/listacompras.html">Listado de Compras</a>
-        <a href="../pages/elementos.html">Elementos</a>
-        <a href="../pages/contacto.html">Contacto</a>
-        <a href="../pages/iniciosesion.html">Inicio de Sesion</a>
-        <a href="../pages/registro.html">Registro</a>
+      <!-- navbar de bootstrap, en celular se convierte en el menu hamburguesa -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Lista de Electrónica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="listacompras.html">Lista de compras</a></li>
+              <li class="nav-item"><a class="nav-link" href="elementos.html">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <article>
-        <h1 class="titulo">
-          Compras para Trabajo Practico Laboratorio de Electronica 1
-        </h1>
 
-        <h4 id="ListadoTitulo">Cable UTP de red (para hacer puentes)</h4>
-        <ul class="listadoMateriales">
-          <li >
-            (x 1 m) o cables dupont macho macho de 10 cm (x 30 unidades).
-          </li>
-        </ul>
-      </article>
-      <div id="botonFlotante" class="box">
-        <a href="../pages/listacompras.html">inicio</a>
-      </div>
+    <main>
+      <section class="titulo">
+        <h1 class="display-6">Cable UTP de red</h1>
+        <p class="lead mb-0">Para hacer los puentes en el protoboard</p>
+      </section>
+
+      <section class="container py-4">
+        <!-- migas de pan para saber donde estoy -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="listacompras.html">Lista de compras</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cable UTP de red</li>
+          </ol>
+        </nav>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5 card-title">¿Para qué sirven?</h2>
+            <p class="card-text mb-0">Adentro tiene 8 cablecitos de cobre macizo que se pelan y se cortan a medida para conectar en el protoboard. Es más barato que comprar cables armados.</p>
+          </div>
+        </div>
+
+        <h2 class="h4 mb-3">Qué hay que comprar</h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered bg-white">
+            <thead class="table-dark">
+              <tr><th>Componente</th><th>Cantidad</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cable UTP</td><td>1 metro</td></tr>
+              <tr><td>o cables dupont macho-macho de 10 cm</td><td>30 unidades</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
     </main>
-    <footer><p>&copy;Derechos reservados</p></footer>
+
+    <!-- boton fijo para volver a la lista, practica de position fixed -->
+    <a id="botonFlotante" href="listacompras.html">Volver</a>
+
+    <footer class="text-center py-3 mt-5">
+      <p class="mb-0">Juan Pablo Rearte · Laboratorio de Electrónica 1</p>
+    </footer>
+
+    <!-- js de bootstrap, lo necesito para que abra el menu hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
